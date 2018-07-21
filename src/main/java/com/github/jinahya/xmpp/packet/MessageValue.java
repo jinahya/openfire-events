@@ -26,7 +26,7 @@ public class MessageValue {
     // -------------------------------------------------------------------------
     public static MessageValue of(final Message object) {
         if (object == null) {
-            return null;
+            throw new NullPointerException("object is null");
         }
         final MessageValue value = new MessageValue();
         value.setBody(object.getBody());

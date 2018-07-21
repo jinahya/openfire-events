@@ -15,6 +15,7 @@
  */
 package com.github.jinahya.xmpp.packet;
 
+import java.util.function.Supplier;
 import org.xmpp.packet.JID;
 
 /**
@@ -24,15 +25,23 @@ import org.xmpp.packet.JID;
  */
 public class JidValue {
 
-    public static JidValue of(final JID object) {
-        if (object == null) {
-            return null;
+    protected static <T extends JidValue> T of(final Supplier<T> supplier,
+                                               final JID object) {
+        if (supplier == null) {
+            throw new NullPointerException("supplier is null");
         }
-        final JidValue value = new JidValue();
+        if (object == null) {
+            throw new NullPointerException("object is null");
+        }
+        final T value = supplier.get();
         value.setDomain(object.getDomain());
         value.setNode(object.getNode());
         value.setResource(object.getResource());
         return value;
+    }
+
+    public static JidValue of(final JID object) {
+        return of(JidValue::new, object);
     }
 
     // -------------------------------------------------------------------------

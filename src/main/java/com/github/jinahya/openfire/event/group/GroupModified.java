@@ -22,24 +22,9 @@ import org.jivesoftware.openfire.group.Group;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class GroupModified {
+public class GroupModified extends GroupWithParamsEvent {
 
-    public static GroupModified of(final Group group, Map params) {
-        final GroupModified instance = new GroupModified();
-        instance.group = group;
-        instance.params = params;
-        return instance;
+    public static GroupModified of(final Group group, final Map params) {
+        return of(GroupModified::new, group, params);
     }
-
-    public Group getGroup() {
-        return group;
-    }
-
-    public Map getParams() {
-        return params;
-    }
-
-    private Group group;
-
-    private Map params;
 }

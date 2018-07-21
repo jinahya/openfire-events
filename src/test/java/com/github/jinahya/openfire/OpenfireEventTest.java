@@ -13,15 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.privacy;
+package com.github.jinahya.openfire;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class PrivacyListWrapper {
+import static java.util.Objects.requireNonNull;
 
-    private int cachedSize;
+public abstract class OpenfireEventTest<T extends OpenfireEvent> {
 
-    public String name;
+    // -------------------------------------------------------------------------
+    public OpenfireEventTest(final Class<T> eventClass) {
+        super();
+        this.eventClass = requireNonNull(eventClass, "eventClass is null");
+    }
+
+    // -------------------------------------------------------------------------
+    protected final Class<T> eventClass;
 }

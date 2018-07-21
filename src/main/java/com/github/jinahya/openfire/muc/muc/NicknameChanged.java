@@ -15,43 +15,18 @@
  */
 package com.github.jinahya.openfire.muc.muc;
 
-import com.github.jinahya.xmpp.packet.JidValue;
 import org.xmpp.packet.JID;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class NicknameChanged extends MUCEvent {
+public class NicknameChanged extends MucRoomUserEvent {
 
     // -------------------------------------------------------------------------
-    public static NicknameChanged of(final JID roomJID, final JID user,
+    public static NicknameChanged of(final JID room, final JID user,
                                      final String oldNickname,
                                      final String newNickname) {
-        final NicknameChanged instance = new NicknameChanged();
-        instance.setRoomJID(JidValue.of(roomJID));
-        instance.setUser(JidValue.of(user));
+        final NicknameChanged instance = of(NicknameChanged::new, room, user);
         instance.setOldNickname(oldNickname);
         instance.setNewNickname(newNickname);
         return instance;
-    }
-
-    // ----------------------------------------------------------------- roomJID
-    public JidValue getRoodJID() {
-        return roomJID;
-    }
-
-    public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
-    }
-
-    // -------------------------------------------------------------------- user
-    public JidValue getUser() {
-        return user;
-    }
-
-    public void setUser(final JidValue user) {
-        this.user = user;
     }
 
     // ------------------------------------------------------------- oldNickname
@@ -73,10 +48,6 @@ public class NicknameChanged extends MUCEvent {
     }
 
     // -------------------------------------------------------------------------
-    private JidValue roomJID;
-
-    private JidValue user;
-
     private String oldNickname;
 
     private String newNickname;

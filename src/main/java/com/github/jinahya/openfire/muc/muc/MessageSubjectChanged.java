@@ -23,7 +23,7 @@ import org.xmpp.packet.JID;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class MessageSubjectChanged extends MUCEvent {
+public class MessageSubjectChanged extends MucEvent {
 
     // -------------------------------------------------------------------------
     public static MessageSubjectChanged of(final JID roomJID, final JID user,

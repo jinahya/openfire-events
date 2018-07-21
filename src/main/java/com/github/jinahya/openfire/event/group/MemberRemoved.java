@@ -17,19 +17,14 @@ package com.github.jinahya.openfire.event.group;
 
 import java.util.Map;
 import org.jivesoftware.openfire.group.Group;
-import org.jivesoftware.openfire.event.GroupEventListener;
 
 /**
- * An event for
- * {@link GroupEventListener#adminAdded(org.jivesoftware.openfire.group.Group, java.util.Map)}.
- * {@link GroupEventListener#adminAdded(Group, Map)}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class AdminAdded extends GroupWithParamsEvent {
+public class MemberRemoved extends GroupWithParamsEvent {
 
-    // -------------------------------------------------------------------------
-    public static AdminAdded of(final Group group, final Map params) {
-        return of(AdminAdded::new, group, params);
+    public static MemberRemoved of(final Group group, Map params) {
+        return of(MemberRemoved::new, group, params);
     }
 }

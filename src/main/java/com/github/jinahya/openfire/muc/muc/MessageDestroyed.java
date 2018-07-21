@@ -23,7 +23,7 @@ import org.xmpp.packet.JID;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class MessageDestroyed extends MUCEvent {
+public class MessageDestroyed extends MucEvent {
 
     // -------------------------------------------------------------------------
     public static MessageDestroyed of(final JID roomJID) {

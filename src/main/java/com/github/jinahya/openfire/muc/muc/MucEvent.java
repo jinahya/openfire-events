@@ -13,14 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.event;
+package com.github.jinahya.openfire.muc.muc;
 
-import org.jivesoftware.openfire.event.UserEventListener;
+import com.github.jinahya.openfire.OpenfireEvent;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class UserEventAdapter implements UserEventListener {
-
+public abstract class MucEvent extends OpenfireEvent {
 }

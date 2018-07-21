@@ -15,58 +15,15 @@
  */
 package com.github.jinahya.openfire.muc.muc;
 
-import com.github.jinahya.xmpp.packet.JidValue;
-import static java.util.Optional.ofNullable;
 import org.xmpp.packet.JID;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-//public class OccupantJoined extends MucEvent {
-public class OccupantJoined extends MUCEvent {
+public class OccupantJoined extends MucRoomUserNicknameEvent {
 
     // -------------------------------------------------------------------------
-    public static OccupantJoined of(final JID roomJID, final JID user,
+    public static OccupantJoined of(final JID room, final JID user,
                                     final String nickname) {
-        final OccupantJoined instance = new OccupantJoined();
-        instance.setRoomJID(ofNullable(roomJID).map(JidValue::of).orElse(null));
-        instance.setUser(ofNullable(user).map(JidValue::of).orElse(null));
-        instance.setNickname(nickname);
+        final OccupantJoined instance
+                = of(OccupantJoined::new, room, user, nickname);
         return instance;
     }
-
-    // ----------------------------------------------------------------- roomJID
-    public JidValue getRoomJID() {
-        return roomJID;
-    }
-
-    public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
-    }
-
-    // -------------------------------------------------------------------- user
-    public JidValue getUser() {
-        return user;
-    }
-
-    public void setUser(final JidValue user) {
-        this.user = user;
-    }
-
-    // ---------------------------------------------------------------- nickname
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(final String nickname) {
-        this.nickname = nickname;
-    }
-
-    // -------------------------------------------------------------------------
-    private JidValue roomJID;
-
-    private JidValue user;
-
-    private String nickname;
 }

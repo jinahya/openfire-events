@@ -15,31 +15,29 @@
  */
 package com.github.jinahya.openfire.muc.muc;
 
-import com.github.jinahya.xmpp.packet.JidValue;
+import java.util.function.Supplier;
 import org.xmpp.packet.JID;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class MessageCreated extends MucEvent {
+abstract class MucRoomUserNicknameEvent extends MucRoomUserEvent {
 
-    // -------------------------------------------------------------------------
-    public static MessageCreated of(final JID roomJID) {
-        final MessageCreated instance = new MessageCreated();
-        instance.setRoomJID(JidValue.of(roomJID));
+    static <T extends MucRoomUserNicknameEvent> T of(final Supplier<T> supplier,
+                                                     final JID room,
+                                                     final JID user,
+                                                     final String nickname) {
+        final T instance = of(supplier, room, user);
+        instance.setNickname(nickname);
         return instance;
     }
 
-    // ----------------------------------------------------------------- roomJID
-    public JidValue getRoomJID() {
-        return roomJID;
+    // -------------------------------------------------------------------------
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     // -------------------------------------------------------------------------
-    private JidValue roomJID;
+    private String nickname;
 }

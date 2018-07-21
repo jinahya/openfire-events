@@ -22,24 +22,9 @@ import org.jivesoftware.openfire.group.Group;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class MemberAdded {
+public class MemberAdded extends GroupWithParamsEvent {
 
     public static MemberAdded of(final Group group, Map params) {
-        final MemberAdded instance = new MemberAdded();
-        instance.group = group;
-        instance.params = params;
-        return instance;
+        return of(MemberAdded::new, group, params);
     }
-
-    public Group getGroup() {
-        return group;
-    }
-
-    public Map getParams() {
-        return params;
-    }
-
-    private Group group;
-
-    private Map params;
 }

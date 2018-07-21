@@ -13,23 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.event.group;
+package com.github.jinahya.openfire.group;
 
-import java.util.Map;
-import org.jivesoftware.openfire.group.Group;
-import org.jivesoftware.openfire.event.GroupEventListener;
+import com.github.jinahya.xmpp.packet.JidValue;
+import org.jivesoftware.openfire.group.GroupJID;
 
 /**
- * An event for
- * {@link GroupEventListener#adminAdded(org.jivesoftware.openfire.group.Group, java.util.Map)}.
- * {@link GroupEventListener#adminAdded(Group, Map)}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class AdminAdded extends GroupWithParamsEvent {
+public class GroupJidValue extends JidValue {
+
+    static GroupJidValue of(final GroupJID object) {
+        if (object == null) {
+            throw new NullPointerException("object is null");
+        }
+        final GroupJidValue value = of(GroupJidValue::new, object);
+        value.setGroupName(object.getGroupName());
+        return value;
+    }
 
     // -------------------------------------------------------------------------
-    public static AdminAdded of(final Group group, final Map params) {
-        return of(AdminAdded::new, group, params);
+    public String getGroupName() {
+        return groupName;
     }
+
+    public void setGroupName(final String groupName) {
+        this.groupName = groupName;
+    }
+
+    // -------------------------------------------------------------------------
+    private String groupName;
 }

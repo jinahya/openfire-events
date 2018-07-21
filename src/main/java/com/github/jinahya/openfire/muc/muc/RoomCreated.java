@@ -15,30 +15,13 @@
  */
 package com.github.jinahya.openfire.muc.muc;
 
-import com.github.jinahya.xmpp.packet.JidValue;
 import org.xmpp.packet.JID;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class RoomCreated extends MUCEvent {
+public class RoomCreated extends MucRoomEvent {
 
-    public static RoomCreated of(final JID roomJID) {
-        final RoomCreated instance = new RoomCreated();
-        instance.setRoomJID(JidValue.of(roomJID));
+    // -------------------------------------------------------------------------
+    public static RoomCreated of(final JID room) {
+        final RoomCreated instance = of(RoomCreated::new, room);
         return instance;
     }
-
-    // -------------------------------------------------------------------------
-    public JidValue getRoomJID() {
-        return roomJID;
-    }
-
-    public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
-    }
-
-    // -------------------------------------------------------------------------
-    private JidValue roomJID;
 }

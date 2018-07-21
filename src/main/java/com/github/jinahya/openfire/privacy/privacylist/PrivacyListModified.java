@@ -17,11 +17,10 @@ package com.github.jinahya.openfire.privacy.privacylist;
 
 import org.jivesoftware.openfire.privacy.PrivacyList;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class PrivacyListModified extends PrivacyListEvent {
+public class PrivacyListModified extends PrivacyListWithListEvent {
 
-    private PrivacyList privacyList;
+    // -------------------------------------------------------------------------
+    public static PrivacyListModified of(final PrivacyList list) {
+        return of(PrivacyListModified::new, list);
+    }
 }

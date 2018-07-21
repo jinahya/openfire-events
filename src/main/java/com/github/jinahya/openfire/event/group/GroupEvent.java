@@ -13,14 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.muc.muc;
+package com.github.jinahya.openfire.event.group;
 
 import com.github.jinahya.openfire.OpenfireEvent;
+import org.jivesoftware.openfire.event.GroupEventListener;
 
 /**
+ * An abstract class for events listenable via {@link GroupEventListener}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class MUCEvent extends OpenfireEvent {
-
+public abstract class GroupEvent extends OpenfireEvent {
 }

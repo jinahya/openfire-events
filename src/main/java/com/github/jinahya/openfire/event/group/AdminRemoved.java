@@ -22,24 +22,9 @@ import org.jivesoftware.openfire.group.Group;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class AdminRemoved {
+public class AdminRemoved extends GroupWithParamsEvent {
 
-    public static AdminRemoved of(final Group group, Map params) {
-        final AdminRemoved instance = new AdminRemoved();
-        instance.group = group;
-        instance.params = params;
-        return instance;
+    public static AdminRemoved of(final Group group, final Map params) {
+        return of(AdminRemoved::new, group, params);
     }
-
-    public Group getGroup() {
-        return group;
-    }
-
-    public Map getParams() {
-        return params;
-    }
-
-    private Group group;
-
-    private Map params;
 }

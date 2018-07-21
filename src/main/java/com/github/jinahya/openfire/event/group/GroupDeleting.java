@@ -22,24 +22,9 @@ import org.jivesoftware.openfire.group.Group;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class GroupDeleting {
+public class GroupDeleting extends GroupWithParamsEvent {
 
-    public static GroupDeleting of(final Group group, Map params) {
-        final GroupDeleting instance = new GroupDeleting();
-        instance.group = group;
-        instance.params = params;
-        return instance;
+    public static GroupDeleting of(final Group group, final Map params) {
+        return of(GroupDeleting::new, group, params);
     }
-
-    public Group getGroup() {
-        return group;
-    }
-
-    public Map getParams() {
-        return params;
-    }
-
-    private Group group;
-
-    private Map params;
 }

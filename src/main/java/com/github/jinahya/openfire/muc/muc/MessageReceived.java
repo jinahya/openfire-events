@@ -15,7 +15,6 @@
  */
 package com.github.jinahya.openfire.muc.muc;
 
-import com.github.jinahya.xmpp.packet.JidValue;
 import com.github.jinahya.xmpp.packet.MessageValue;
 import static java.util.Optional.ofNullable;
 import org.xmpp.packet.JID;
@@ -25,46 +24,17 @@ import org.xmpp.packet.Message;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class MessageReceived {
+public class MessageReceived extends MucRoomUserNicknameEvent {
 
     // -------------------------------------------------------------------------
-    public static MessageReceived of(final JID roomJID, final JID user,
+    public static MessageReceived of(final JID room, final JID user,
                                      final String nickname,
                                      final Message message) {
-        final MessageReceived instance = new MessageReceived();
-        instance.setRoomJID(ofNullable(roomJID).map(JidValue::of).orElse(null));
-        instance.setUser(ofNullable(user).map(JidValue::of).orElse(null));
-        instance.setNickname(nickname);
+        final MessageReceived instance
+                = of(MessageReceived::new, room, user, nickname);
         instance.setMessage(
                 ofNullable(message).map(MessageValue::of).orElse(null));
         return instance;
-    }
-
-    // ----------------------------------------------------------------- roomJID
-    public JidValue getRoomJID() {
-        return roomJID;
-    }
-
-    public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
-    }
-
-    // -------------------------------------------------------------------- user
-    public JidValue getUser() {
-        return user;
-    }
-
-    public void setUser(final JidValue user) {
-        this.user = user;
-    }
-
-    // ---------------------------------------------------------------- nickname
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(final String nickname) {
-        this.nickname = nickname;
     }
 
     // ----------------------------------------------------------------- message
@@ -77,11 +47,5 @@ public class MessageReceived {
     }
 
     // -------------------------------------------------------------------------
-    private JidValue roomJID;
-
-    private JidValue user;
-
-    private String nickname;
-
     private MessageValue message;
 }

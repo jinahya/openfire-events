@@ -15,17 +15,50 @@
  */
 package com.github.jinahya.openfire;
 
+import static java.lang.String.format;
+import static java.lang.invoke.MethodHandles.lookup;
+import static java.util.Objects.requireNonNull;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
+import static java.util.logging.Logger.getLogger;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public abstract class BlockingEventAdapter {
+public abstract class BlockingEventAdapter<T extends OpenfireEvent> {
 
-    public BlockingEventAdapter(final BlockingQueue<? super OpenfireEvent> queue) {
+    private static final Logger logger
+            = getLogger(lookup().lookupClass().getName());
+
+    // -------------------------------------------------------------------------
+    public BlockingEventAdapter(final BlockingQueue<? super T> queue) {
         super();
+        this.queue = requireNonNull(queue, "queue is null");
     }
 
-    private final BlockingQueue<? super OpenfireEvent> queue;
+    // -------------------------------------------------------------------------
+    protected boolean offer(final T e) {
+        if (e == null) {
+            throw new NullPointerException("e is null");
+        }
+        final boolean offered = queue.offer(e);
+        if (!offered) {
+            logger.severe(() -> format("failed to offer %1$s", e));
+        }
+        return offered;
+    }
+
+    protected boolean offer(final T e, final long timeout, final TimeUnit unit)
+            throws InterruptedException {
+        if (e == null) {
+            throw new NullPointerException("e is null");
+        }
+        final boolean offered = queue.offer(e, timeout, unit);
+        if (!offered) {
+            logger.severe(() -> format(
+                    "failed to offer %1$s in %2$d(%3$s)", e, timeout, unit));
+        }
+        return offered;
+    }
+
+    // -------------------------------------------------------------------------
+    private final BlockingQueue<? super T> queue;
 }

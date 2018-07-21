@@ -16,30 +16,31 @@
 package com.github.jinahya.openfire.muc.muc;
 
 import com.github.jinahya.xmpp.packet.JidValue;
+import static java.util.Optional.ofNullable;
+import java.util.function.Supplier;
 import org.xmpp.packet.JID;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class MessageCreated extends MucEvent {
+abstract class MucRoomEvent extends MucEvent {
 
-    // -------------------------------------------------------------------------
-    public static MessageCreated of(final JID roomJID) {
-        final MessageCreated instance = new MessageCreated();
-        instance.setRoomJID(JidValue.of(roomJID));
+    static <T extends MucRoomEvent> T of(final Supplier<T> supplier,
+                                         final JID room) {
+        if (supplier == null) {
+            throw new NullPointerException("supplier is null");
+        }
+        final T instance = supplier.get();
+        instance.setRoom(ofNullable(room).map(JidValue::of).orElse(null));
         return instance;
     }
 
-    // ----------------------------------------------------------------- roomJID
-    public JidValue getRoomJID() {
-        return roomJID;
+    // -------------------------------------------------------------------------
+    public JidValue getRoom() {
+        return room;
     }
 
-    public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
+    public void setRoom(final JidValue room) {
+        this.room = room;
     }
 
     // -------------------------------------------------------------------------
-    private JidValue roomJID;
+    private JidValue room;
 }

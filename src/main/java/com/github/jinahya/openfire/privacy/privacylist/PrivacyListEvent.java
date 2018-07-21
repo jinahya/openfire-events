@@ -17,10 +17,5 @@ package com.github.jinahya.openfire.privacy.privacylist;
 
 import com.github.jinahya.openfire.OpenfireEvent;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class PrivacyListEvent extends OpenfireEvent {
-
+public abstract class PrivacyListEvent extends OpenfireEvent {
 }

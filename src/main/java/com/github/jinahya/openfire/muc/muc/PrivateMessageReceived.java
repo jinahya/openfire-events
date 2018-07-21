@@ -17,41 +17,39 @@ package com.github.jinahya.openfire.muc.muc;
 
 import com.github.jinahya.xmpp.packet.JidValue;
 import com.github.jinahya.xmpp.packet.MessageValue;
+import static java.util.Optional.ofNullable;
 import org.xmpp.packet.JID;
 import org.xmpp.packet.Message;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class PrivateMessageReceived extends MUCEvent {
+public class PrivateMessageReceived extends MucEvent {
 
     // -------------------------------------------------------------------------
-    public static PrivateMessageReceived of(final JID toJID, final JID fromJID,
+    public static PrivateMessageReceived of(final JID to, final JID from,
                                             final Message message) {
         final PrivateMessageReceived instance = new PrivateMessageReceived();
-        instance.setToJID(JidValue.of(toJID));
-        instance.setFromJID(JidValue.of(fromJID));
-        instance.setMessage(MessageValue.of(message));
+        instance.setTo(ofNullable(to).map(JidValue::of).orElse(null));
+        instance.setFrom(ofNullable(from).map(JidValue::of).orElse(null));
+        instance.setMessage(
+                ofNullable(message).map(MessageValue::of).orElse(null));
         return instance;
     }
 
-    // ------------------------------------------------------------------- toJID
-    public JidValue getToJID() {
-        return toJID;
+    // ---------------------------------------------------------------------- to
+    public JidValue getTo() {
+        return to;
     }
 
-    public void setToJID(final JidValue toJID) {
-        this.toJID = toJID;
+    public void setTo(final JidValue to) {
+        this.to = to;
     }
 
-    // ----------------------------------------------------------------- fromJID
-    public JidValue getFromJID() {
-        return fromJID;
+    // -------------------------------------------------------------------- from
+    public JidValue getFrom() {
+        return from;
     }
 
-    public void setFromJID(final JidValue fromJID) {
-        this.fromJID = fromJID;
+    public void setFrom(final JidValue from) {
+        this.from = from;
     }
 
     // ----------------------------------------------------------------- message
@@ -64,9 +62,9 @@ public class PrivateMessageReceived extends MUCEvent {
     }
 
     // -------------------------------------------------------------------------
-    private JidValue toJID;
+    private JidValue to;
 
-    private JidValue fromJID;
+    private JidValue from;
 
     private MessageValue message;
 }

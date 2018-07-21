@@ -18,29 +18,24 @@ package com.github.jinahya.openfire.muc.muc;
 import com.github.jinahya.xmpp.packet.JidValue;
 import org.xmpp.packet.JID;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class RoomSubjectChanged {
+public class RoomSubjectChanged extends MucRoomUserEvent {
 
     // -------------------------------------------------------------------------
-    public static RoomSubjectChanged of(final JID roomJID, final JID user,
+    public static RoomSubjectChanged of(final JID room, final JID user,
                                         final String newSubject) {
-        final RoomSubjectChanged instance = new RoomSubjectChanged();
-        instance.setRoomJID(JidValue.of(roomJID));
-        instance.setUser(JidValue.of(user));
-        instance.setNewSubject(newSubject);
+        final RoomSubjectChanged instance
+                = of(RoomSubjectChanged::new, room, user);
+        instance.setSubject(newSubject);
         return instance;
     }
 
-    // ----------------------------------------------------------------- roomJID
-    public JidValue getRoomJID() {
-        return roomJID;
+    // -------------------------------------------------------------------- room
+    public JidValue getRoom() {
+        return room;
     }
 
     public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
+        this.room = roomJID;
     }
 
     // -------------------------------------------------------------------- user
@@ -52,19 +47,19 @@ public class RoomSubjectChanged {
         this.user = user;
     }
 
-    // -------------------------------------------------------------- newSubject
-    public String getNewSubject() {
-        return newSubject;
+    // ----------------------------------------------------------------- subject
+    public String getSubject() {
+        return subject;
     }
 
-    public void setNewSubject(final String newSubject) {
-        this.newSubject = newSubject;
+    public void setSubject(final String subject) {
+        this.subject = subject;
     }
 
     // -------------------------------------------------------------------------
-    private JidValue roomJID;
+    private JidValue room;
 
     private JidValue user;
 
-    private String newSubject;
+    private String subject;
 }

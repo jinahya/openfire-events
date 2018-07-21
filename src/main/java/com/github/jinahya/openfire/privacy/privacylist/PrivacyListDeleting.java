@@ -21,5 +21,22 @@ package com.github.jinahya.openfire.privacy.privacylist;
  */
 public class PrivacyListDeleting extends PrivacyListEvent {
 
+    // -------------------------------------------------------------------------
+    public static PrivacyListDeleting of(final String listName) {
+        final PrivacyListDeleting instance = new PrivacyListDeleting();
+        instance.setListName(listName);
+        return instance;
+    }
+
+    // ---------------------------------------------------------------- listName
+    public String getListName() {
+        return listName;
+    }
+
+    public void setListName(final String listName) {
+        this.listName = listName;
+    }
+
+    // -------------------------------------------------------------------------
     private String listName;
 }

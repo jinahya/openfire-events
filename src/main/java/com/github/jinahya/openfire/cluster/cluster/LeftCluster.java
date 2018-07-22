@@ -13,21 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.component;
+package com.github.jinahya.openfire.cluster.cluster;
 
-import org.xmpp.packet.IQ;
-
-/**
- * An event represents
- * {@link org.jivesoftware.openfire.component.ComponentEventListener#componentInfoReceived(org.xmpp.packet.IQ)}.
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class ComponentInfoReceived {
-
-    public IQ getIq() {
-        return iq;
-    }
-
-    private IQ iq;
+public class LeftCluster extends ClusterEvent {
 }

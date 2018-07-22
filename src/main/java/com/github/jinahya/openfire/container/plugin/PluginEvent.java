@@ -15,24 +15,11 @@
  */
 package com.github.jinahya.openfire.container.plugin;
 
-import java.util.function.Supplier;
-import org.jivesoftware.openfire.container.Plugin;
+import com.github.jinahya.openfire.OpenfireEvent;
 
 /**
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-abstract class PluginEvent {
-
-    static <T extends PluginEvent> T of(final Supplier<T> supplier,
-                                        final String pluginName, final Plugin plugin) {
-        final T instance = supplier.get();
-        instance.pluginName = pluginName;
-        instance.plugin = plugin;
-        return instance;
-    }
-
-    String pluginName;
-
-    Plugin plugin;
+public abstract class PluginEvent extends OpenfireEvent {
 }

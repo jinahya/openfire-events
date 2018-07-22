@@ -13,33 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.muc.muc;
+package com.github.jinahya.openfire.component.component;
 
 import com.github.jinahya.xmpp.packet.JidValue;
+import static java.util.Optional.ofNullable;
 import org.xmpp.packet.JID;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class MessageCreated extends MucEvent {
+public class ComponentRegistered extends ComponentEvent {
 
     // -------------------------------------------------------------------------
-    public static MessageCreated of(final JID roomJID) {
-        final MessageCreated instance = new MessageCreated();
-        instance.setRoomJID(JidValue.of(roomJID));
+    public static ComponentRegistered of(final JID component) {
+        final ComponentRegistered instance = new ComponentRegistered();
+        instance.setComponent(
+                ofNullable(component).map(JidValue::of).orElse(null));
         return instance;
     }
 
-    // ----------------------------------------------------------------- roomJID
-    public JidValue getRoomJID() {
-        return roomJID;
+    // -------------------------------------------------------------------------
+    public JidValue getComponent() {
+        return component;
     }
 
-    public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
+    public void setComponent(final JidValue component) {
+        this.component = component;
     }
 
     // -------------------------------------------------------------------------
-    private JidValue roomJID;
+    private JidValue component;
 }

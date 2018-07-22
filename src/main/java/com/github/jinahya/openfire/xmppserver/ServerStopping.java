@@ -13,21 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.component;
+package com.github.jinahya.openfire.xmppserver;
 
-import org.xmpp.packet.JID;
+public class ServerStopping extends XmppServerEvent {
 
-/**
- * An event represents
- * {@link org.jivesoftware.openfire.component.ComponentEventListener#componentUnregistered(org.xmpp.packet.JID)}.
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class ComponentUnregistered {
-
-    public JID getJid() {
-        return jid;
-    }
-
-    private JID jid;
 }

@@ -15,15 +15,13 @@
  */
 package com.github.jinahya.openfire.container.plugin;
 
-import org.jivesoftware.openfire.container.Plugin;
-
 /**
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class PluginCreated extends PluginEvent {
+public class PluginCreated extends PluginWithNameEvent {
 
-    public static PluginCreated of(final String pluginName, final Plugin plugin) {
-        return of(PluginCreated::new, pluginName, plugin);
+    public static PluginCreated of(final String name) {
+        return of(PluginCreated::new, name);
     }
 }

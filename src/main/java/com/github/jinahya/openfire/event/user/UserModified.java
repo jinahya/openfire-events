@@ -22,8 +22,9 @@ import org.jivesoftware.openfire.user.User;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class UserModified extends UserEvent {
+public class UserModified extends UserWithParamsEvent {
 
+    // -------------------------------------------------------------------------
     public static UserModified of(final User user,
                                   final Map<String, Object> params) {
         return of(UserModified::new, user, params);

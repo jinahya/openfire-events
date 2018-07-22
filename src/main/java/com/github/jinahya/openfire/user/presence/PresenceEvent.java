@@ -21,6 +21,6 @@ import com.github.jinahya.openfire.OpenfireEvent;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class PresenceEvent extends OpenfireEvent {
+public abstract class PresenceEvent extends OpenfireEvent {
 
 }

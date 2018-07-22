@@ -13,22 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.event.user;
+package com.github.jinahya.openfire.cluster.cluster;
 
-import java.util.Map;
-import org.jivesoftware.openfire.user.User;
+public class LeftClusterWithNode extends ClusterWithNodeEvent {
 
-/**
- * An event for
- * {@link org.jivesoftware.openfire.event.UserEventListener#userCreated(org.jivesoftware.openfire.user.User, java.util.Map)}.
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class UserCreated extends UserWithParamsEvent {
-
-    // -------------------------------------------------------------------------
-    public static UserCreated of(final User user,
-                                 final Map<String, Object> params) {
-        return of(UserCreated::new, user, params);
+    public static LeftClusterWithNode of(final byte[] node) {
+        return of(LeftClusterWithNode::new, node);
     }
 }

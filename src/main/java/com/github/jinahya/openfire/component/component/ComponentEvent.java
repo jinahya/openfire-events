@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.cluster;
+package com.github.jinahya.openfire.component.component;
+
+import com.github.jinahya.openfire.OpenfireEvent;
 
 /**
- * An event represents
- * {@link org.jivesoftware.openfire.cluster.ClusterEventListener#markedAsSeniorClusterMember()}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class MarkedAsSeniorClusterMember {
+public class ComponentEvent extends OpenfireEvent {
+
 }

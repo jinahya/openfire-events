@@ -21,23 +21,30 @@ import static java.util.Optional.ofNullable;
 import org.jivesoftware.openfire.user.User;
 
 /**
+ * A value class for {@link User}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class UserValue {
 
-    public static UserValue of(final User user) {
-        if (user == null) {
-            return null;
+    public static UserValue of(final User object) {
+        if (object == null) {
+            throw new NullPointerException("object is null");
         }
-        final UserValue instance = new UserValue();
-        instance.setCreationDate(user.getCreationDate());
-        instance.setEmail(user.getEmail());
-        instance.setModificationDate(user.getModificationDate());
-        instance.setName(user.getName());
-        instance.setProperties(user.getProperties());
-        instance.setUsernmae(user.getUsername());
-        return instance;
+        final UserValue value = new UserValue();
+        value.setCreationDate(object.getCreationDate());
+        value.setCreationMillis(
+                ofNullable(object.getCreationDate()).map(Date::getTime)
+                        .orElse(null));
+        value.setEmail(object.getEmail());
+        value.setModificationDate(object.getModificationDate());
+        value.setModificationMillis(
+                ofNullable(object.getModificationDate()).map(Date::getTime)
+                        .orElse(null));
+        value.setName(object.getName());
+        value.setProperties(object.getProperties());
+        value.setUsernmae(object.getUsername());
+        return value;
     }
 
     // ------------------------------------------------------------ creationDate
@@ -49,6 +56,15 @@ public class UserValue {
     public void setCreationDate(final Date creationDate) {
         this.creationDate = ofNullable(creationDate)
                 .map(v -> new Date(v.getTime())).orElse(null);
+    }
+
+    // ---------------------------------------------------------- creationMillis
+    public Long getCreationMillis() {
+        return creationMillis;
+    }
+
+    public void setCreationMillis(final Long creationMillis) {
+        this.creationMillis = creationMillis;
     }
 
     // ------------------------------------------------------------------- email
@@ -69,6 +85,15 @@ public class UserValue {
     public void setModificationDate(final Date modificationDate) {
         this.modificationDate = ofNullable(modificationDate)
                 .map(v -> new Date(v.getTime())).orElse(null);
+    }
+
+    // ------------------------------------------------------ modificationMillis
+    public Long getModificationMillis() {
+        return modificationMillis;
+    }
+
+    public void setModificationMillis(final Long modificationMillis) {
+        this.modificationMillis = modificationMillis;
     }
 
     // -------------------------------------------------------------------- name
@@ -101,9 +126,13 @@ public class UserValue {
     // -------------------------------------------------------------------------
     private Date creationDate;
 
+    private Long creationMillis;
+
     private String email;
 
     private Date modificationDate;
+
+    private Long modificationMillis;
 
     private String name;
 

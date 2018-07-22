@@ -13,21 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.component;
+package com.github.jinahya.openfire.cluster.cluster;
 
-import org.xmpp.packet.JID;
-
-/**
- * An event represents
- * {@link org.jivesoftware.openfire.component.ComponentEventListener#componentRegistered(org.xmpp.packet.JID)}.
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class ComponentRegistered {
-
-    public JID getJid() {
-        return jid;
-    }
-
-    private JID jid;
+public class JoinedCluster extends ClusterEvent {
 }

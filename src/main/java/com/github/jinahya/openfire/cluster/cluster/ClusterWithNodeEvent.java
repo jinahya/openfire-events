@@ -13,34 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.muc.muc;
+package com.github.jinahya.openfire.cluster.cluster;
 
-import com.github.jinahya.xmpp.packet.JidValue;
+import static java.util.Arrays.copyOf;
 import static java.util.Optional.ofNullable;
-import org.xmpp.packet.JID;
+import java.util.function.Supplier;
 
 /**
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class MessageDestroyed extends MucEvent {
+abstract class ClusterWithNodeEvent extends ClusterEvent {
 
     // -------------------------------------------------------------------------
-    public static MessageDestroyed of(final JID roomJID) {
-        final MessageDestroyed instance = new MessageDestroyed();
-        instance.setRoomJID(ofNullable(roomJID).map(JidValue::of).orElse(null));
+    static <T extends ClusterWithNodeEvent> T of(final Supplier<T> supplier,
+                                                 final byte[] node) {
+        if (supplier == null) {
+            throw new NullPointerException("supplier is null");
+        }
+        final T instance = supplier.get();
+        instance.setNode(
+                ofNullable(node).map(v -> copyOf(v, v.length)).orElse(null));
         return instance;
     }
 
-    // ----------------------------------------------------------------- roomJID
-    public JidValue getRoomJID() {
-        return roomJID;
+    // -------------------------------------------------------------------------
+    public byte[] getNode() {
+        return node;
     }
 
-    public void setRoomJID(final JidValue roomJID) {
-        this.roomJID = roomJID;
+    public void setNode(final byte[] node) {
+        this.node = node;
     }
 
     // -------------------------------------------------------------------------
-    private JidValue roomJID;
+    private byte[] node;
 }

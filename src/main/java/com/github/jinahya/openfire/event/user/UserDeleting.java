@@ -18,11 +18,7 @@ package com.github.jinahya.openfire.event.user;
 import java.util.Map;
 import org.jivesoftware.openfire.user.User;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class UserDeleting extends UserEvent {
+public class UserDeleting extends UserWithParamsEvent {
 
     public static UserDeleting of(final User user,
                                   final Map<String, Object> params) {

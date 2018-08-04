@@ -15,10 +15,12 @@
  */
 package com.github.jinahya.openfire.user;
 
+import org.jivesoftware.openfire.user.User;
+
 import java.util.Date;
 import java.util.Map;
+
 import static java.util.Optional.ofNullable;
-import org.jivesoftware.openfire.user.User;
 
 /**
  * A value class for {@link User}.

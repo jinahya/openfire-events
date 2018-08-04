@@ -16,7 +16,6 @@
 package com.github.jinahya.openfire.xmppserver;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class ServerStarted extends XmppServerEvent {

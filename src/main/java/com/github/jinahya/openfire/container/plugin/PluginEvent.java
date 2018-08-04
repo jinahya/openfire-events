@@ -16,10 +16,12 @@
 package com.github.jinahya.openfire.container.plugin;
 
 import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.OpenfireEventNamespace;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 public abstract class PluginEvent extends OpenfireEvent {
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public PluginEvent(final String identifier) {
+        super(OpenfireEventNamespace.CONTAINER_PLUGIN, identifier);
+    }
 }

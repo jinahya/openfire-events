@@ -16,32 +16,29 @@
 package com.github.jinahya.openfire.container;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
-import com.github.jinahya.openfire.container.plugin.PluginCreated;
-import com.github.jinahya.openfire.container.plugin.PluginDestroyed;
+import com.github.jinahya.openfire.container.plugin.PluginEventPluginCreated;
+import com.github.jinahya.openfire.container.plugin.PluginEventPluginDestroyed;
 import com.github.jinahya.openfire.container.plugin.PluginEvent;
-import java.util.concurrent.BlockingQueue;
 import org.jivesoftware.openfire.container.Plugin;
 import org.jivesoftware.openfire.container.PluginListener;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class BlockingPluginAdapter extends BlockingEventAdapter<PluginEvent>
-        implements PluginListener {
+import java.util.concurrent.BlockingQueue;
 
-    public BlockingPluginAdapter(
-            final BlockingQueue<? super PluginEvent> queue) {
+public class BlockingPluginAdapter extends BlockingEventAdapter<PluginEvent> implements PluginListener {
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public BlockingPluginAdapter(final BlockingQueue<? super PluginEvent> queue) {
         super(queue);
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
     @Override
     public void pluginCreated(final String name, final Plugin plugin) {
-        final boolean offered = offer(PluginCreated.of(name));
+        final boolean offered = offer(PluginEventPluginCreated.of(name));
     }
 
     @Override
     public void pluginDestroyed(final String name, final Plugin plugin) {
-        final boolean offered = offer(PluginDestroyed.of(name));
+        final boolean offered = offer(PluginEventPluginDestroyed.of(name));
     }
 }

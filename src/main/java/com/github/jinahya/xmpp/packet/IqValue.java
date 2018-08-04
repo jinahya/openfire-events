@@ -15,11 +15,13 @@
  */
 package com.github.jinahya.xmpp.packet;
 
-import static java.util.Optional.ofNullable;
 import org.xmpp.packet.IQ;
 
+import java.util.Objects;
+
+import static java.util.Optional.ofNullable;
+
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class IqValue {
@@ -35,6 +37,50 @@ public class IqValue {
         value.setRequest(object.isRequest());
         value.setResponse(object.isResponse());
         return value;
+    }
+
+    // -------------------------------------------------------------------------
+    @Override
+    public String toString() {
+        return super.toString() + "{"
+               + "type=" + type
+               + ",request=" + request
+               + ",response=" + response
+               + "}";
+    }
+
+    // -------------------------------------------------------------------------
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 47 * hash + Objects.hashCode(type);
+        hash = 47 * hash + (request ? 1 : 0);
+        hash = 47 * hash + (response ? 1 : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final IqValue other = (IqValue) obj;
+        if (request != other.request) {
+            return false;
+        }
+        if (response != other.response) {
+            return false;
+        }
+        if (!Objects.equals(type, other.type)) {
+            return false;
+        }
+        return true;
     }
 
     // -------------------------------------------------------------------- type

@@ -19,7 +19,6 @@ import org.jsmpp.session.ClientSession;
 import org.xmpp.packet.Presence;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class PresenceChanged {

@@ -18,7 +18,6 @@ package com.github.jinahya.openfire.user.presence;
 import org.xmpp.packet.JID;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class SubscribedToPresence {

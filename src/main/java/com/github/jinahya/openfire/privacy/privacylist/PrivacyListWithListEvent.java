@@ -16,8 +16,9 @@
 package com.github.jinahya.openfire.privacy.privacylist;
 
 import com.github.jinahya.openfire.privacy.PrivacyListValue;
-import java.util.function.Supplier;
 import org.jivesoftware.openfire.privacy.PrivacyList;
+
+import java.util.function.Supplier;
 
 public abstract class PrivacyListWithListEvent extends PrivacyListEvent {
 

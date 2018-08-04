@@ -16,67 +16,54 @@
 package com.github.jinahya.openfire.event;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
-import com.github.jinahya.openfire.event.group.AdminAdded;
-import com.github.jinahya.openfire.event.group.AdminRemoved;
-import com.github.jinahya.openfire.event.group.GroupCreated;
-import com.github.jinahya.openfire.event.group.GroupDeleting;
-import com.github.jinahya.openfire.event.group.GroupEvent;
-import com.github.jinahya.openfire.event.group.GroupModified;
-import com.github.jinahya.openfire.event.group.MemberAdded;
-import com.github.jinahya.openfire.event.group.MemberRemoved;
-import java.util.Map;
-import java.util.concurrent.BlockingQueue;
 import org.jivesoftware.openfire.event.GroupEventListener;
 import org.jivesoftware.openfire.group.Group;
 
-/**
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class BlockingGroupEventAdapter extends BlockingEventAdapter<GroupEvent>
-        implements GroupEventListener {
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+
+public class BlockingGroupEventAdapter extends BlockingEventAdapter<GroupEvent> implements GroupEventListener {
 
     // -------------------------------------------------------------------------
-    public BlockingGroupEventAdapter(
-            final BlockingQueue<? super GroupEvent> queue) {
+    public BlockingGroupEventAdapter(final BlockingQueue<? super GroupEvent> queue) {
         super(queue);
     }
 
-    // ------------------------------------------------------------------- admin
+    // ----------------------------------------------------------------------------------------------------------- admin
     @Override
     public void adminAdded(final Group group, final Map params) {
-        final boolean offered = offer(AdminAdded.of(group, params));
+        final boolean offered = offer(GroupEventAdminAdded.of(group, params));
     }
 
     @Override
     public void adminRemoved(final Group group, final Map params) {
-        final boolean offered = offer(AdminRemoved.of(group, params));
+        final boolean offered = offer(GroupEventAdminRemoved.of(group, params));
     }
 
-    // ------------------------------------------------------------------- group
+    // ----------------------------------------------------------------------------------------------------------- group
     @Override
     public void groupCreated(final Group group, final Map params) {
-        final boolean offered = offer(GroupCreated.of(group, params));
+        final boolean offered = offer(GroupEventGroupCreated.of(group, params));
     }
 
     @Override
     public void groupDeleting(final Group group, final Map params) {
-        final boolean offered = offer(GroupDeleting.of(group, params));
+        final boolean offered = offer(GroupEventGroupDeleting.of(group, params));
     }
 
     @Override
     public void groupModified(final Group group, final Map params) {
-        final boolean offered = offer(GroupModified.of(group, params));
+        final boolean offered = offer(GroupEventGroupModified.of(group, params));
     }
 
-    // ------------------------------------------------------------------ member
+    // ---------------------------------------------------------------------------------------------------------- member
     @Override
     public void memberAdded(final Group group, final Map params) {
-        final boolean offfered = offer(MemberAdded.of(group, params));
+        final boolean offfered = offer(GroupEventMemberAdded.of(group, params));
     }
 
     @Override
     public void memberRemoved(final Group group, final Map params) {
-        final boolean offered = offer(MemberRemoved.of(group, params));
+        final boolean offered = offer(GroupEventMemberRemoved.of(group, params));
     }
 }

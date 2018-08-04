@@ -15,8 +15,10 @@
  */
 package com.github.jinahya.xmpp.packet;
 
-import java.util.function.Supplier;
 import org.xmpp.packet.JID;
+
+import java.util.Objects;
+import java.util.function.Supplier;
 
 /**
  * A value type for {@link JID}.
@@ -42,6 +44,50 @@ public class JidValue {
 
     public static JidValue of(final JID object) {
         return of(JidValue::new, object);
+    }
+
+    // -------------------------------------------------------------------------
+    @Override
+    public String toString() {
+        return super.toString() + "{"
+               + "domain=" + domain
+               + ",node=" + node
+               + ",resource=" + resource
+               + "}";
+    }
+
+    // -------------------------------------------------------------------------
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 59 * hash + Objects.hashCode(domain);
+        hash = 59 * hash + Objects.hashCode(node);
+        hash = 59 * hash + Objects.hashCode(resource);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final JidValue other = (JidValue) obj;
+        if (!Objects.equals(domain, other.domain)) {
+            return false;
+        }
+        if (!Objects.equals(node, other.node)) {
+            return false;
+        }
+        if (!Objects.equals(resource, other.resource)) {
+            return false;
+        }
+        return true;
     }
 
     // -------------------------------------------------------------------------

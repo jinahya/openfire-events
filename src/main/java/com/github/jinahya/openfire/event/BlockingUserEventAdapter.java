@@ -16,45 +16,42 @@
 package com.github.jinahya.openfire.event;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
-import com.github.jinahya.openfire.event.user.UserCreated;
-import com.github.jinahya.openfire.event.user.UserDeleting;
-import com.github.jinahya.openfire.event.user.UserEvent;
-import com.github.jinahya.openfire.event.user.UserModified;
-import static java.lang.invoke.MethodHandles.lookup;
-import java.util.Map;
-import java.util.concurrent.BlockingQueue;
-import java.util.logging.Logger;
-import static java.util.logging.Logger.getLogger;
 import org.jivesoftware.openfire.event.UserEventListener;
 import org.jivesoftware.openfire.user.User;
 
-public class BlockingUserEventAdapter extends BlockingEventAdapter<UserEvent>
-        implements UserEventListener {
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.logging.Logger;
 
-    private static final Logger logger
-            = getLogger(lookup().lookupClass().getName());
+import static java.lang.invoke.MethodHandles.lookup;
+import static java.util.logging.Logger.getLogger;
 
-    // -------------------------------------------------------------------------
-    public BlockingUserEventAdapter(
-            final BlockingQueue<? super UserEvent> queue) {
+public class BlockingUserEventAdapter extends BlockingEventAdapter<UserEvent> implements UserEventListener {
+
+    // -----------------------------------------------------------------------------------------------------------------
+    private static final Logger logger = getLogger(lookup().lookupClass().getName());
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public BlockingUserEventAdapter(final BlockingQueue<? super UserEvent> queue) {
         super(queue);
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
     @Override
     public void userCreated(final User user, final Map<String, Object> map) {
-        final UserEvent event = UserCreated.of(user, map);
+        final UserEvent event = UserEventUserCreated.of(user, map);
         final boolean offered = offer(event);
     }
 
     @Override
     public void userDeleting(final User user, final Map<String, Object> map) {
-        final UserEvent event = UserDeleting.of(user, map);
+        final UserEvent event = UserEventUserDeleting.of(user, map);
         final boolean offered = offer(event);
     }
 
     @Override
     public void userModified(final User user, final Map<String, Object> map) {
-        final UserEvent event = UserModified.of(user, map);
+        final UserEvent event = UserEventUserModified.of(user, map);
         final boolean offered = offer(event);
     }
 }

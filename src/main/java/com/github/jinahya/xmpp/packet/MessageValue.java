@@ -17,7 +17,10 @@ package com.github.jinahya.xmpp.packet;
 
 import org.xmpp.packet.Message;
 
+import java.util.Objects;
+
 /**
+ * A value class for {@link Message}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
@@ -34,6 +37,54 @@ public class MessageValue {
         value.setThread(object.getThread());
         value.setType(object.getType().name());
         return value;
+    }
+
+    // -------------------------------------------------------------------------
+    @Override
+    public String toString() {
+        return super.toString() + "{"
+               + "body=" + body
+               + ",subject=" + subject
+               + ",thread=" + thread
+               + ",type=" + type
+               + "}";
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 89 * hash + Objects.hashCode(body);
+        hash = 89 * hash + Objects.hashCode(subject);
+        hash = 89 * hash + Objects.hashCode(thread);
+        hash = 89 * hash + Objects.hashCode(type);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final MessageValue other = (MessageValue) obj;
+        if (!Objects.equals(body, other.body)) {
+            return false;
+        }
+        if (!Objects.equals(subject, other.subject)) {
+            return false;
+        }
+        if (!Objects.equals(thread, other.thread)) {
+            return false;
+        }
+        if (!Objects.equals(type, other.type)) {
+            return false;
+        }
+        return true;
     }
 
     // -------------------------------------------------------------------------

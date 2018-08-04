@@ -18,20 +18,18 @@ package com.github.jinahya.openfire.filetransfer;
 import org.jivesoftware.openfire.filetransfer.FileTransfer;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class FileTransferComplete {
+public class FileTransferComplete extends FileTransferEventWithTransferAndFlag {
 
-    public FileTransfer getTransfer() {
-        return transfer;
+    // -------------------------------------------------------------------------
+    public static final FileTransferComplete of(
+            final FileTransfer transfer, final boolean successful) {
+        return of(FileTransferComplete::new, transfer, successful);
     }
 
-    public boolean isSuccessful() {
-        return successful;
+    // -------------------------------------------------------------------------
+    public boolean getSuccessful() {
+        return getFlag();
     }
-
-    private FileTransfer transfer;
-
-    private boolean successful;
 }

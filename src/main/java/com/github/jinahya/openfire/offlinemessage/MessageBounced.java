@@ -18,7 +18,6 @@ package com.github.jinahya.openfire.offlinemessage;
 import org.xmpp.packet.Message;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class MessageBounced extends OfflineMessageEvent {

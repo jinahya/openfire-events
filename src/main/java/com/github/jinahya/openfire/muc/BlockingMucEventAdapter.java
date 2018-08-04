@@ -16,83 +16,63 @@
 package com.github.jinahya.openfire.muc;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
-import com.github.jinahya.openfire.muc.muc.MessageReceived;
-import com.github.jinahya.openfire.muc.muc.MucEvent;
-import com.github.jinahya.openfire.muc.muc.NicknameChanged;
-import com.github.jinahya.openfire.muc.muc.OccupantJoined;
-import com.github.jinahya.openfire.muc.muc.OccupantLeft;
-import com.github.jinahya.openfire.muc.muc.PrivateMessageReceived;
-import com.github.jinahya.openfire.muc.muc.RoomCreated;
-import com.github.jinahya.openfire.muc.muc.RoomDestroyed;
-import com.github.jinahya.openfire.muc.muc.RoomSubjectChanged;
-import java.util.concurrent.BlockingQueue;
 import org.jivesoftware.openfire.muc.MUCEventListener;
 import org.xmpp.packet.JID;
 import org.xmpp.packet.Message;
 
+import java.util.concurrent.BlockingQueue;
+
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class BlockingMucEventAdapter extends BlockingEventAdapter<MucEvent>
-        implements MUCEventListener {
+public class BlockingMucEventAdapter extends BlockingEventAdapter<MucEvent> implements MUCEventListener {
 
     // -------------------------------------------------------------------------
-    public BlockingMucEventAdapter(
-            final BlockingQueue<? super MucEvent> queue) {
+    public BlockingMucEventAdapter(final BlockingQueue<? super MucEvent> queue) {
         super(queue);
     }
 
     // ----------------------------------------------------------------- message
     @Override
-    public void messageReceived(final JID room, final JID user,
-                                final String nickname, final Message message) {
+    public void messageReceived(final JID room, final JID user, final String nickname, final Message message) {
         final boolean offered
-                = offer(MessageReceived.of(room, user, nickname, message));
+                = offer(MucMessageReceived.of(room, user, nickname, message));
     }
 
     @Override
-    public void privateMessageRecieved(final JID to, final JID from,
-                                       final Message message) {
-        final boolean offered
-                = offer(PrivateMessageReceived.of(to, from, message));
+    public void privateMessageRecieved(final JID to, final JID from, final Message message) {
+        final boolean offered = offer(MucPrivateMessageReceived.of(to, from, message));
     }
 
     // ---------------------------------------------------------------- occupant
     @Override
-    public void occupantJoined(final JID room, final JID user,
-                               final String nickname) {
-        final boolean offered = offer(OccupantJoined.of(room, user, nickname));
+    public void occupantJoined(final JID room, final JID user, final String nickname) {
+        final boolean offered = offer(MucOccupantJoined.of(room, user, nickname));
     }
 
     @Override
     public void occupantLeft(final JID room, final JID user) {
-        final boolean offered = offer(OccupantLeft.of(room, user));
+        final boolean offered = offer(MucOccupantLeft.of(room, user));
     }
 
     @Override
-    public void nicknameChanged(final JID room, final JID user,
-                                final String oldNickname,
-                                final String newNickname) {
-        final boolean offered = offer(
-                NicknameChanged.of(room, user, oldNickname, newNickname));
+    public void nicknameChanged(final JID room, final JID user, final String oldNickname, final String newNickname) {
+        final boolean offered = offer(MucNicknameChanged.of(room, user, oldNickname, newNickname));
     }
 
     // -------------------------------------------------------------------- room
     @Override
     public void roomCreated(final JID room) {
-        final boolean offered = offer(RoomCreated.of(room));
+        final boolean offered = offer(MucRoomCreated.of(room));
     }
 
     @Override
     public void roomDestroyed(final JID room) {
-        final boolean offered = offer(RoomDestroyed.of(room));
+        final boolean offered = offer(MucRoomDestroyed.of(room));
     }
 
     @Override
-    public void roomSubjectChanged(final JID room, final JID user,
-                                   final String subject) {
-        final boolean offered
-                = offer(RoomSubjectChanged.of(room, user, subject));
+    public void roomSubjectChanged(final JID room, final JID user, final String subject) {
+        final boolean offered = offer(MucRoomSubjectChanged.of(room, user, subject));
     }
 }

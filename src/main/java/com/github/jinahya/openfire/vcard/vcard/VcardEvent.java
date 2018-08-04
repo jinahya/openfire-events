@@ -18,7 +18,6 @@ package com.github.jinahya.openfire.vcard.vcard;
 import com.github.jinahya.openfire.OpenfireEvent;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class VcardEvent extends OpenfireEvent {

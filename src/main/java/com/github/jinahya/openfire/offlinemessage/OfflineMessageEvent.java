@@ -15,11 +15,11 @@
  */
 package com.github.jinahya.openfire.offlinemessage;
 
-import java.util.function.Supplier;
 import org.xmpp.packet.Message;
 
+import java.util.function.Supplier;
+
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class OfflineMessageEvent {

@@ -15,12 +15,13 @@
  */
 package com.github.jinahya.openfire;
 
-import static java.lang.String.format;
-import static java.lang.invoke.MethodHandles.lookup;
-import static java.util.Objects.requireNonNull;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
+
+import static java.lang.String.format;
+import static java.lang.invoke.MethodHandles.lookup;
+import static java.util.Objects.requireNonNull;
 import static java.util.logging.Logger.getLogger;
 
 public abstract class BlockingEventAdapter<T extends OpenfireEvent> {

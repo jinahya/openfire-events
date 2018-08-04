@@ -19,11 +19,11 @@ import com.github.jinahya.xmpp.packet.JidValue;
 import org.jivesoftware.openfire.group.GroupJID;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class GroupJidValue extends JidValue {
 
+    // -----------------------------------------------------------------------------------------------------------------
     static GroupJidValue of(final GroupJID object) {
         if (object == null) {
             throw new NullPointerException("object is null");

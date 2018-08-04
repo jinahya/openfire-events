@@ -16,7 +16,6 @@
 package com.github.jinahya.openfire.privacy.privacylist;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class PrivacyListDeleting extends PrivacyListEvent {

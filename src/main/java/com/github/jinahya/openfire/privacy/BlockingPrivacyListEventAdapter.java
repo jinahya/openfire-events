@@ -20,9 +20,10 @@ import com.github.jinahya.openfire.privacy.privacylist.PrivacyListCreated;
 import com.github.jinahya.openfire.privacy.privacylist.PrivacyListDeleting;
 import com.github.jinahya.openfire.privacy.privacylist.PrivacyListEvent;
 import com.github.jinahya.openfire.privacy.privacylist.PrivacyListModified;
-import java.util.concurrent.BlockingQueue;
 import org.jivesoftware.openfire.privacy.PrivacyList;
 import org.jivesoftware.openfire.privacy.PrivacyListEventListener;
+
+import java.util.concurrent.BlockingQueue;
 
 public class BlockingPrivacyListEventAdapter
         extends BlockingEventAdapter<PrivacyListEvent>

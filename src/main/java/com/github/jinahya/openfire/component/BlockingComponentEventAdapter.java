@@ -16,20 +16,28 @@
 package com.github.jinahya.openfire.component;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
-import com.github.jinahya.openfire.component.component.ComponentEvent;
-import com.github.jinahya.openfire.component.component.ComponentInfoReceived;
-import com.github.jinahya.openfire.component.component.ComponentRegistered;
-import com.github.jinahya.openfire.component.component.ComponentUnregistered;
-import java.util.concurrent.BlockingQueue;
 import org.jivesoftware.openfire.component.ComponentEventListener;
 import org.xmpp.packet.IQ;
 import org.xmpp.packet.JID;
 
+import java.util.concurrent.BlockingQueue;
+
+/**
+ * A blocking event adapter implements {@link ComponentEventListener}.
+ *
+ * @author Jin Kwon &lt;onacit at gmail.com&gt;
+ */
 public class BlockingComponentEventAdapter
         extends BlockingEventAdapter<ComponentEvent>
         implements ComponentEventListener {
 
     // -------------------------------------------------------------------------
+
+    /**
+     * Creates a new instance.
+     *
+     * @param queue a queue to which event are offered.
+     */
     public BlockingComponentEventAdapter(
             final BlockingQueue<? super ComponentEvent> queue) {
         super(queue);
@@ -38,17 +46,20 @@ public class BlockingComponentEventAdapter
     // -------------------------------------------------------------------------
     @Override
     public void componentInfoReceived(final IQ iq) {
-        final boolean offered = offer(ComponentInfoReceived.of(iq));
+        final boolean offered
+                = offer(ComponentEventComponentInfoReceived.of(iq));
     }
 
     // -------------------------------------------------------------------------
     @Override
-    public void componentRegistered(final JID componentJID) {
-        final boolean offered = offer(ComponentRegistered.of(componentJID));
+    public void componentRegistered(final JID componentJid) {
+        final boolean offered
+                = offer(ComponentEventComponentRegistered.of(componentJid));
     }
 
     @Override
-    public void componentUnregistered(final JID componentJID) {
-        final boolean offered = offer(ComponentUnregistered.of(componentJID));
+    public void componentUnregistered(final JID componentJid) {
+        final boolean offered
+                = offer(ComponentEventComponentUnregistered.of(componentJid));
     }
 }

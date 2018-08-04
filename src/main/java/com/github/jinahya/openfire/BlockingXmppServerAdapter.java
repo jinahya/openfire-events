@@ -18,8 +18,9 @@ package com.github.jinahya.openfire;
 import com.github.jinahya.openfire.xmppserver.ServerStarted;
 import com.github.jinahya.openfire.xmppserver.ServerStopping;
 import com.github.jinahya.openfire.xmppserver.XmppServerEvent;
-import java.util.concurrent.BlockingQueue;
 import org.jivesoftware.openfire.XMPPServerListener;
+
+import java.util.concurrent.BlockingQueue;
 
 /**
  * An adapter for offering events from {@link XMPPServerListener}.

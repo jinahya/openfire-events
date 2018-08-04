@@ -15,23 +15,25 @@
  */
 package com.github.jinahya.openfire.group;
 
-import static java.util.Optional.ofNullable;
 import org.jivesoftware.openfire.group.Group;
 
+import static java.util.Optional.ofNullable;
+
 /**
+ * A value class for {@link Group}
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class GroupValue {
 
+    // -----------------------------------------------------------------------------------------------------------------
     public static GroupValue of(final Group object) {
         if (object == null) {
             throw new NullPointerException("object is null");
         }
         final GroupValue value = new GroupValue();
         value.setDescription(object.getDescription());
-        value.setJid(ofNullable(object.getJID()).map(GroupJidValue::of)
-                .orElse(null));
+        value.setJid(ofNullable(object.getJID()).map(GroupJidValue::of).orElse(null));
         value.setName(object.getName());
         return value;
     }
@@ -41,7 +43,7 @@ public class GroupValue {
         return description;
     }
 
-    public void setDescription(final String description) {
+    void setDescription(final String description) {
         this.description = description;
     }
 
@@ -50,7 +52,7 @@ public class GroupValue {
         return jid;
     }
 
-    public void setJid(final GroupJidValue jid) {
+    void setJid(final GroupJidValue jid) {
         this.jid = jid;
     }
 
@@ -59,7 +61,7 @@ public class GroupValue {
         return name;
     }
 
-    public void setName(final String name) {
+    void setName(final String name) {
         this.name = name;
     }
 

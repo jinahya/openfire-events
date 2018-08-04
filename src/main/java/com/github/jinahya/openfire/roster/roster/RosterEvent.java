@@ -18,7 +18,6 @@ package com.github.jinahya.openfire.roster.roster;
 import com.github.jinahya.openfire.OpenfireEvent;
 
 /**
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public abstract class RosterEvent extends OpenfireEvent {

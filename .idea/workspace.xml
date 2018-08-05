@@ -2,88 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a2c9849-623d-4939-a468-b168d43526d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventWithComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/BlockingEventAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/BlockingEventAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/onacit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/XmlConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/UserValueProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/MapAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/MapEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/JaxbContexts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/JaxbTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventUserCreatedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventWithUserAndParametersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/user/UserValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_0_jdk5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_8_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_8_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_19_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_21_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfire-events.iml" beforeDir="false" afterPath="$PROJECT_DIR$/openfire-events.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/BlockingXmppServerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/BlockingXmppServerAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/BlockingClusterEventAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/BlockingClusterEventAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/cluster/ClusterEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/cluster/ClusterWithNodeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEventWithNodeId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/cluster/JoinedCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEventJoinedCluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/cluster/JoinedClusterWithNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEventJoinedClusterNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/cluster/LeftCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEventLeftCluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/cluster/LeftClusterWithNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEventLeftClusterNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/cluster/MarkedAsSeniorClusterMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEventMarkedAsSeniorClusterMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/BlockingComponentEventAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/BlockingComponentEventAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/component/ComponentEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/component/ComponentInfoReceived.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentInfoReceived.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/component/ComponentRegistered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentRegistered.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/component/ComponentUnregistered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentUnregistered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEventNamespace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEventNamespace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/BlockingPluginAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/BlockingPluginAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginCreated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginCreated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginDestroyed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginDestroyed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginWithNameEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventWithName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/BlockingGroupEventAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/BlockingGroupEventAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/BlockingUserEventAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/BlockingUserEventAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/AdminAdded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventAdminAdded.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/AdminRemoved.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventAdminRemoved.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/GroupCreated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventGroupCreated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/GroupDeleting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventGroupDeleting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/GroupEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/GroupModified.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventGroupModified.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/GroupRemoved.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventGroupRemoved.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/GroupWithParamsEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventWithGroupAndParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/MemberAdded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventMemberAdded.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/group/MemberRemoved.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventMemberRemoved.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/session/SessionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/session/SessionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/user/UserCreated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserCreated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/user/UserDeleting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserDeleting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/user/UserEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/user/UserModified.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserModified.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/user/UserWithParamsEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventWithUserAndParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/filetransfer/FileTransferComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/filetransfer/FileTransferComplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/filetransfer/FileTransferStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/filetransfer/FileTransferStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupJidValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupJidValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/http/session/SessionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/http/session/SessionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/mediaproxy/session/SessionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/mediaproxy/session/SessionEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/BlockingMucEventAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/BlockingMucEventAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/MessageReceived.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucMessageReceived.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/MucEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/MucRoomEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/MucRoomUserEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoomAndUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/MucRoomUserNicknameEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoomUserAndNickname.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/NicknameChanged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucNicknameChanged.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/OccupantJoined.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucOccupantJoined.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/OccupantLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucOccupantLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/PrivateMessageReceived.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucPrivateMessageReceived.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/RoomCreated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomCreated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/RoomDestroyed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomDestroyed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/muc/RoomSubjectChanged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomSubjectChanged.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/offlinemessage/MessageBounced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/offlinemessage/MessageBounced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/offlinemessage/MessageStored.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/offlinemessage/MessageStored.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/offlinemessage/OfflineMessageEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/offlinemessage/OfflineMessageEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/privacy/BlockingPrivacyListEventAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/privacy/BlockingPrivacyListEventAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/privacy/privacylist/PrivacyListDeleting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/privacy/privacylist/PrivacyListDeleting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/privacy/privacylist/PrivacyListWithListEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/privacy/privacylist/PrivacyListWithListEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/roster/roster/RosterEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/roster/roster/RosterEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginCreated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEventPluginCreated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginDestroyed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEventPluginDestroyed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventWithName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEventWithName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserCreated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserCreated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventWithUserAndParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventWithUserAndParams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/UserValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/UserValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/AvailableSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/AvailableSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/PresenceChanged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/PresenceChanged.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/PresenceEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/PresenceEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/SubscribedToPresence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/SubscribedToPresence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/UnavailableSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/UnavailableSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/UnsubscribedToPresence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/presence/UnsubscribedToPresence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/vcard/vcard/VcardEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/vcard/vcard/VcardEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/xmppcontext/XmppContextEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/xmppcontext/XmppContextEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/xmppserver/ServerStarted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/xmppserver/ServerStarted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/xmppserver/XmppServerEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/xmppserver/XmppServerEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xmpp/packet/IqValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xmpp/packet/IqValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xmpp/packet/JidValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xmpp/packet/JidValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xmpp/packet/MessageValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jinahya/xmpp/packet/MessageValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/OpenfireEventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/OpenfireEventTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -96,30 +58,43 @@
     <session id="-1876859377">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="53" />
+          <entry key="class" value="1" />
+          <entry key="index" value="2" />
+          <entry key="java" value="90" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="53" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="90" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4694" />
+          <entry key="class" value="1" />
+          <entry key="index" value="33" />
+          <entry key="java" value="12294" />
+          <entry key="xml" value="183" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4694" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="12294" />
+          <entry key="PLAIN_TEXT" value="33" />
+          <entry key="XML" value="183" />
         </counts>
       </usages-collector>
     </session>
@@ -127,96 +102,104 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupJidValue.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/UserValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+            <state relative-caret-position="193">
+              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupValue.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserCreated.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="255">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/BlockingPluginAdapter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventWithUserAndParams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEventNamespace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginCreated.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="22" selection-end-line="24" />
+            <state relative-caret-position="612">
+              <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginDestroyed.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventWithUserAndParametersTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            <state relative-caret-position="323">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventWithName.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventParameter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="255">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/JaxbTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/MapEntry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/OpenfireEventTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/user/UserValues.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventMemberAdded.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/github/jinahya/openfire/user/jaxb.index">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventMemberRemoved.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+            <state>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -224,31 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/net/DatagramPacketValue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentUnregistered.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/BlockingMucEventAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoomAndUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoomUserAndNickname.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucOccupantJoined.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucMessageReceived.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucNicknameChanged.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucOccupantLeft.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucPrivateMessageReceived.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomCreated.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomDestroyed.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomSubjectChanged.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/BlockingClusterEventAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/BlockingExternalComponentManagerAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentInfoReceived.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentRegistered.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventWithComponent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/BlockingGroupEventAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/BlockingUserEventAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventWithGroupAndParams.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventGroupRemoved.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventAdminAdded.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventAdminRemoved.java" />
@@ -258,8 +216,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventMemberAdded.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventMemberRemoved.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserCreated.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventWithUserAndParams.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserDeleting.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserModified.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupJidValue.java" />
@@ -268,12 +224,48 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginCreated.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginDestroyed.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginWithNameEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEventNamespace.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventWithName.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginCreated.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginDestroyed.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventWithName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEventWithName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEventPluginCreated.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/JaxbContexts.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/BlockingXmppServerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/package-info.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/XmlConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/XmlConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/github/jinahya/openfire/event/jaxb.index" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserCreated.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEventNamespace.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEvent.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/OpenfireEventTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventUserCreatedTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/package-info.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/MapAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/MapEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/package-info.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/user/UserValues.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/UserValueProperty.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/package-info.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/UserValue.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/github/jinahya/openfire/user/jaxb.index" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/JaxbTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventParam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventWithUserAndParams.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventWithUserAndParamsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventParameter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventWithUserAndParametersTest.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -290,9 +282,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -352,7 +341,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jinahya" type="462c0819:PsiDirectoryNode" />
               <item name="openfire" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
@@ -362,8 +351,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jinahya" type="462c0819:PsiDirectoryNode" />
               <item name="openfire" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
@@ -378,21 +366,87 @@
               <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
               <item name="openfire-events" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openfire-events" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="openfire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openfire-events" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="openfire" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openfire-events" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openfire-events" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openfire-events" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="openfire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openfire-events" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="openfire" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="openfire-events" type="b2602c69:ProjectViewProjectNode" />
+              <item name="openfire-events" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="openfire" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533376208091" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533462717378" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.jinahya.openfire.event" />
+      <recent name="com.github.jinahya.openfire.user" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -423,7 +477,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -431,13 +485,13 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32939914" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.49034336" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32939914" />
@@ -455,160 +509,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/net/DatagramPacketValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/roster/roster/RosterEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/BlockingMucEventAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="57" lean-forward="true" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoomAndUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="40" column="58" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucEventWithRoomUserAndNickname.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucMessageReceived.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucNicknameChanged.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucOccupantJoined.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucOccupantLeft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucPrivateMessageReceived.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomCreated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomDestroyed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/muc/MucRoomSubjectChanged.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/util/certificate/CertificateEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/BlockingClusterEventAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/cluster/ClusterEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/BlockingExternalComponentManagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentInfoReceived.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentRegistered.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/component/ComponentEventComponentUnregistered.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -693,31 +593,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserCreated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserDeleting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventWithUserAndParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -742,6 +621,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/BlockingPluginAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEventPluginCreated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEventPluginDestroyed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/PluginEventWithName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/GroupEventMemberRemoved.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -749,52 +670,199 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/group/GroupValue.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/BlockingXmppServerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="425">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/BlockingPluginAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/XmlConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/XmlConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/github/jinahya/openfire/event/jaxb.index">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEventNamespace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="196">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/OpenfireEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="462">
+          <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventWithName.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/JaxbContexts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventUserCreatedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/swing/StringUIClientPropertyKey.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/MapAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/UserValueProperty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="4" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/xml/bind/MapEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventUserCreated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/user/UserValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/user/UserValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginCreated.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/github/jinahya/openfire/user/jaxb.index">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="22" selection-end-line="24" />
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/container/plugin/PluginEventPluginDestroyed.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/JaxbTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="306">
+          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventWithUserAndParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jinahya/openfire/event/UserEventParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/OpenfireEventTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/jinahya/openfire/event/UserEventWithUserAndParametersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>

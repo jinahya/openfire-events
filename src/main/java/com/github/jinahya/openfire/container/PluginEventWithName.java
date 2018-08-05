@@ -13,24 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.container.plugin;
+package com.github.jinahya.openfire.container;
 
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class PluginEventPluginCreated extends PluginEventWithName {
+import java.util.function.Supplier;
 
-    // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "PLUGIN_CREATED";
+abstract class PluginEventWithName extends PluginEvent {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static PluginEventPluginCreated of(final String name) {
-        final PluginEventPluginCreated instance = of(PluginEventPluginCreated::new, name);
+    static <T extends PluginEventWithName> T of(final Supplier<T> supplier, final String name) {
+        if (supplier == null) {
+            throw new NullPointerException("supplier is null");
+        }
+        final T instance = supplier.get();
+        instance.setName(name);
         return instance;
     }
 
     // -----------------------------------------------------------------------------------------------------------------
-    public PluginEventPluginCreated() {
-        super(IDENTIFIER);
+    PluginEventWithName(final String identifier) {
+        super(identifier);
     }
+
+    // ------------------------------------------------------------------------------------------------------------ name
+    public String getName() {
+        return name;
+    }
+
+    void setName(final String name) {
+        this.name = name;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    private String name;
 }

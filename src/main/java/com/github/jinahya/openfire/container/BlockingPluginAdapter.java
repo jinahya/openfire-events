@@ -16,9 +16,6 @@
 package com.github.jinahya.openfire.container;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
-import com.github.jinahya.openfire.container.plugin.PluginEventPluginCreated;
-import com.github.jinahya.openfire.container.plugin.PluginEventPluginDestroyed;
-import com.github.jinahya.openfire.container.plugin.PluginEvent;
 import org.jivesoftware.openfire.container.Plugin;
 import org.jivesoftware.openfire.container.PluginListener;
 

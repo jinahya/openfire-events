@@ -17,8 +17,11 @@ package com.github.jinahya.openfire.user;
 
 import org.jivesoftware.openfire.user.User;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.Map;
+import java.util.List;
 
 import static java.util.Optional.ofNullable;
 
@@ -27,6 +30,7 @@ import static java.util.Optional.ofNullable;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
+@XmlRootElement
 public class UserValue {
 
     public static UserValue of(final User object) {
@@ -35,32 +39,27 @@ public class UserValue {
         }
         final UserValue value = new UserValue();
         value.setCreationDate(object.getCreationDate());
-        value.setCreationMillis(
-                ofNullable(object.getCreationDate()).map(Date::getTime)
-                        .orElse(null));
+        value.setCreationMillis(ofNullable(object.getCreationDate()).map(Date::getTime).orElse(null));
         value.setEmail(object.getEmail());
         value.setModificationDate(object.getModificationDate());
-        value.setModificationMillis(
-                ofNullable(object.getModificationDate()).map(Date::getTime)
-                        .orElse(null));
+        value.setModificationMillis(ofNullable(object.getModificationDate()).map(Date::getTime).orElse(null));
         value.setName(object.getName());
-        value.setProperties(object.getProperties());
-        value.setUsernmae(object.getUsername());
+        ofNullable(object.getProperties()).ifPresent(
+                v -> v.entrySet().stream().map(UserValueProperty::of).forEach(value.getProperties()::add));
+        value.setUsername(object.getUsername());
         return value;
     }
 
-    // ------------------------------------------------------------ creationDate
+    // ---------------------------------------------------------------------------------------------------- creationDate
     public Date getCreationDate() {
-        return ofNullable(creationDate).map(v -> new Date(v.getTime()))
-                .orElse(null);
+        return ofNullable(creationDate).map(v -> new Date(v.getTime())).orElse(null);
     }
 
     public void setCreationDate(final Date creationDate) {
-        this.creationDate = ofNullable(creationDate)
-                .map(v -> new Date(v.getTime())).orElse(null);
+        this.creationDate = ofNullable(creationDate).map(v -> new Date(v.getTime())).orElse(null);
     }
 
-    // ---------------------------------------------------------- creationMillis
+    // -------------------------------------------------------------------------------------------------- creationMillis
     public Long getCreationMillis() {
         return creationMillis;
     }
@@ -69,7 +68,7 @@ public class UserValue {
         this.creationMillis = creationMillis;
     }
 
-    // ------------------------------------------------------------------- email
+    // ----------------------------------------------------------------------------------------------------------- email
     public String getEmail() {
         return email;
     }
@@ -78,18 +77,16 @@ public class UserValue {
         this.email = email;
     }
 
-    // -------------------------------------------------------- modificationDate
+    // ------------------------------------------------------------------------------------------------ modificationDate
     public Date getModificationDate() {
-        return ofNullable(modificationDate).map(v -> new Date(v.getTime()))
-                .orElse(null);
+        return ofNullable(modificationDate).map(v -> new Date(v.getTime())).orElse(null);
     }
 
     public void setModificationDate(final Date modificationDate) {
-        this.modificationDate = ofNullable(modificationDate)
-                .map(v -> new Date(v.getTime())).orElse(null);
+        this.modificationDate = ofNullable(modificationDate).map(v -> new Date(v.getTime())).orElse(null);
     }
 
-    // ------------------------------------------------------ modificationMillis
+    // ---------------------------------------------------------------------------------------------- modificationMillis
     public Long getModificationMillis() {
         return modificationMillis;
     }
@@ -98,7 +95,7 @@ public class UserValue {
         this.modificationMillis = modificationMillis;
     }
 
-    // -------------------------------------------------------------------- name
+    // ------------------------------------------------------------------------------------------------------------ name
     public String getName() {
         return name;
     }
@@ -107,38 +104,45 @@ public class UserValue {
         this.name = name;
     }
 
-    // -------------------------------------------------------------- properties
-    public Map<String, String> getProperties() {
+    // ------------------------------------------------------------------------------------------------------ properties
+    public List<UserValueProperty> getProperties() {
+        if (properties == null) {
+            properties = new ArrayList<>();
+        }
         return properties;
     }
 
-    public void setProperties(final Map<String, String> properties) {
-        this.properties = properties;
+    // -------------------------------------------------------------------------------------------------------- username
+    public String getUsername() {
+        return username;
     }
 
-    // ---------------------------------------------------------------- username
-    public String getUsernmae() {
-        return usernmae;
+    public void setUsername(final String username) {
+        this.username = username;
     }
 
-    public void setUsernmae(final String usernmae) {
-        this.usernmae = usernmae;
-    }
-
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    @XmlElement
     private Date creationDate;
 
+    @XmlElement
     private Long creationMillis;
 
+    @XmlElement
     private String email;
 
+    @XmlElement
     private Date modificationDate;
 
+    @XmlElement
     private Long modificationMillis;
 
+    @XmlElement
     private String name;
 
-    private Map<String, String> properties;
+    @XmlElement(name = "property", nillable = true)
+    private List<UserValueProperty> properties;
 
-    private String usernmae;
+    @XmlElement
+    private String username;
 }

@@ -27,17 +27,14 @@ import java.util.concurrent.BlockingQueue;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class BlockingXmppServerAdapter
-        extends BlockingEventAdapter<XmppServerEvent>
-        implements XMPPServerListener {
+public class BlockingXmppServerAdapter extends BlockingEventAdapter<XmppServerEvent> implements XMPPServerListener {
 
-    // -------------------------------------------------------------------------
-    public BlockingXmppServerAdapter(
-            final BlockingQueue<? super XmppServerEvent> queue) {
+    // -----------------------------------------------------------------------------------------------------------------
+    public BlockingXmppServerAdapter(final BlockingQueue<? super XmppServerEvent> queue) {
         super(queue);
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     @Override
     public void serverStarted() {
         final boolean offered = offer(new ServerStarted());

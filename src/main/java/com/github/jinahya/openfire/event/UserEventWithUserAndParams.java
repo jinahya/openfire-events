@@ -18,14 +18,19 @@ package com.github.jinahya.openfire.event;
 import com.github.jinahya.openfire.user.UserValue;
 import org.jivesoftware.openfire.user.User;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
 import static java.util.Optional.ofNullable;
 
+@XmlTransient
 abstract class UserEventWithUserAndParams extends UserEvent {
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     static <T extends UserEventWithUserAndParams> T of(final Supplier<T> supplier, final User user,
                                                        final Map<String, Object> params) {
         if (supplier == null) {
@@ -33,7 +38,8 @@ abstract class UserEventWithUserAndParams extends UserEvent {
         }
         final T instance = supplier.get();
         instance.setUser(ofNullable(user).map(UserValue::of).orElse(null));
-        instance.setParams(params);
+        ofNullable(params).ifPresent(
+                v -> params.entrySet().stream().map(UserEventParameter::of).forEach(instance.getParameters()::add));
         return instance;
     }
 
@@ -42,7 +48,7 @@ abstract class UserEventWithUserAndParams extends UserEvent {
         super(identifier);
     }
 
-    // -------------------------------------------------------------------- user
+    // ------------------------------------------------------------------------------------------------------------ user
     public UserValue getUser() {
         return user;
     }
@@ -51,17 +57,18 @@ abstract class UserEventWithUserAndParams extends UserEvent {
         this.user = user;
     }
 
-    // ------------------------------------------------------------------ params
-    public Map<String, Object> getParams() {
-        return params;
+    // ------------------------------------------------------------------------------------------------------ parameters
+    public List<UserEventParameter> getParameters() {
+        if (parameters == null) {
+            parameters = new ArrayList<>();
+        }
+        return parameters;
     }
 
-    void setParams(final Map<String, Object> params) {
-        this.params = params;
-    }
-
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    @XmlElement
     private UserValue user;
 
-    private Map<String, Object> params;
+    @XmlElement(name = "parameter")
+    private List<UserEventParameter> parameters;
 }

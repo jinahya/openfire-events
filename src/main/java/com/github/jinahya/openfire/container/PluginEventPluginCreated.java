@@ -13,24 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.container.plugin;
+package com.github.jinahya.openfire.container;
+
+import org.jivesoftware.openfire.container.Plugin;
+import org.jivesoftware.openfire.container.PluginListener;
 
 /**
+ * An event for {@link PluginListener#pluginCreated(String, Plugin)}.
+ *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class PluginEventPluginDestroyed extends PluginEventWithName {
+public class PluginEventPluginCreated extends PluginEventWithName {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "PLUGIN_DESTROYED";
+
+    /**
+     * The identifier of this event. The value is {@value IDENTIFIER}.
+     */
+    public static final String IDENTIFIER = "PLUGIN_CREATED";
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static PluginEventPluginDestroyed of(final String name) {
-        final PluginEventPluginDestroyed instance = of(PluginEventPluginDestroyed::new, name);
+    public static PluginEventPluginCreated of(final String name) {
+        final PluginEventPluginCreated instance = of(PluginEventPluginCreated::new, name);
         return instance;
     }
 
     // -----------------------------------------------------------------------------------------------------------------
-    public PluginEventPluginDestroyed() {
+    public PluginEventPluginCreated() {
         super(IDENTIFIER);
     }
 }

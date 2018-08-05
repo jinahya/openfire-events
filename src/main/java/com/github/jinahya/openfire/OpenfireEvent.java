@@ -15,22 +15,25 @@
  */
 package com.github.jinahya.openfire;
 
+import javax.xml.bind.annotation.XmlElement;
 import java.util.Objects;
 
 import static java.util.Objects.requireNonNull;
 
 /**
+ * An abstract class for openfire event.
+ *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public abstract class OpenfireEvent {
 
+    // -----------------------------------------------------------------------------------------------------------------
     @Deprecated
     public OpenfireEvent() {
         this(OpenfireEventNamespace.UNUSED, "illegal");
     }
 
-    public OpenfireEvent(final OpenfireEventNamespace namespace,
-                         final String identifier) {
+    public OpenfireEvent(final OpenfireEventNamespace namespace, final String identifier) {
         super();
         this.namespace = requireNonNull(namespace, "namespace is null");
         this.identifier = requireNonNull(identifier, "identifier is null");
@@ -80,25 +83,28 @@ public abstract class OpenfireEvent {
         return true;
     }
 
-    // --------------------------------------------------------------- namespace
+    // ------------------------------------------------------------------------------------------------------- namespace
     public OpenfireEventNamespace getNamespace() {
         return namespace;
     }
 
-    // -------------------------------------------------------------- identifier
+    // ------------------------------------------------------------------------------------------------------ identifier
     public String getIdentifier() {
         return identifier;
     }
 
-    // --------------------------------------------------------------- timestamp
+    // ------------------------------------------------------------------------------------------------------- timestamp
     public long getTimestamp() {
         return timestamp;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    @XmlElement(required = true)
     private final OpenfireEventNamespace namespace;
 
+    @XmlElement(required = true)
     private final String identifier;
 
+    @XmlElement(required = true)
     private final long timestamp;
 }

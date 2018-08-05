@@ -17,11 +17,14 @@ package com.github.jinahya.openfire;
 
 import org.jivesoftware.openfire.cluster.ClusterEventListener;
 
+import javax.xml.bind.annotation.XmlEnum;
+
 import static java.util.Objects.requireNonNull;
 
 /**
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
+@XmlEnum
 public enum OpenfireEventNamespace {
 
     @Deprecated

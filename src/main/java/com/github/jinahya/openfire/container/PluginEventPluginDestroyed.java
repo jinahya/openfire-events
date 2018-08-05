@@ -13,32 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire.event;
-
-import org.jivesoftware.openfire.user.User;
-
-import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Map;
+package com.github.jinahya.openfire.container;
 
 /**
- * An event for {@link org.jivesoftware.openfire.event.UserEventListener#userCreated(org.jivesoftware.openfire.user.User,
- * java.util.Map)}.
- *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-@XmlRootElement
-public class UserEventUserCreated extends UserEventWithUserAndParams {
+public class PluginEventPluginDestroyed extends PluginEventWithName {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "USER_CREATED";
+    public static final String IDENTIFIER = "PLUGIN_DESTROYED";
 
-    // -------------------------------------------------------------------------
-    public static UserEventUserCreated of(final User user, final Map<String, Object> params) {
-        return of(UserEventUserCreated::new, user, params);
+    // -----------------------------------------------------------------------------------------------------------------
+    public static PluginEventPluginDestroyed of(final String name) {
+        final PluginEventPluginDestroyed instance = of(PluginEventPluginDestroyed::new, name);
+        return instance;
     }
 
     // -----------------------------------------------------------------------------------------------------------------
-    public UserEventUserCreated() {
+    public PluginEventPluginDestroyed() {
         super(IDENTIFIER);
     }
 }

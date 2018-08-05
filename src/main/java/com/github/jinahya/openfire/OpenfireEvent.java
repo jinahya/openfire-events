@@ -23,9 +23,10 @@ import static java.util.Objects.requireNonNull;
 /**
  * An abstract class for openfire event.
  *
+ * @param <E> identifier type parameter
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public abstract class OpenfireEvent {
+public abstract class OpenfireEvent<E extends Enum<E> & OpenfireEventIdentifier<E>> {
 
     // -----------------------------------------------------------------------------------------------------------------
     @Deprecated
@@ -40,7 +41,15 @@ public abstract class OpenfireEvent {
         this.timestamp = System.nanoTime();
     }
 
-    // -------------------------------------------------------------------------
+    public <E extends Enum<E> & OpenfireEventIdentifier<E>> OpenfireEvent(final OpenfireEventNamespace namespace, final E identifier) {
+        super();
+        this.namespace = requireNonNull(namespace, "namespace is null");
+        //this.identifier = requireNonNull(identifier, "identifier is null");
+        this.identifier = null;
+        this.timestamp = System.nanoTime();
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
     @Override
     public String toString() {
         return super.toString() + "{"

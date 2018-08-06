@@ -20,9 +20,6 @@ import org.xmpp.packet.JID;
 public class MucRoomDestroyed extends MucEventWithRoom {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "ROOM_DESTROYED";
-
-    // -----------------------------------------------------------------------------------------------------------------
     public static MucRoomDestroyed of(final JID room) {
         final MucRoomDestroyed instance = of(MucRoomDestroyed::new, room);
         return instance;
@@ -30,6 +27,6 @@ public class MucRoomDestroyed extends MucEventWithRoom {
 
     // -----------------------------------------------------------------------------------------------------------------
     public MucRoomDestroyed() {
-        super(IDENTIFIER);
+        super(MucEventIdentifier.ROOM_DESTROYED.name());
     }
 }

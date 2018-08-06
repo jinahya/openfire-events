@@ -16,15 +16,18 @@
 package com.github.jinahya.openfire.cluster;
 
 import com.github.jinahya.openfire.OpenfireEvent;
-import com.github.jinahya.openfire.OpenfireEventNamespace;
 
 /**
- * An abstract class for event listenable via {@link org.jivesoftware.openfire.cluster.ClusterEventListener}.
+ * An abstract class for events listenable via {@link org.jivesoftware.openfire.cluster.ClusterEventListener}.
+ *
+ * @author Jin Kwon &lt;onacit_at_gmail.com&gt;
  */
 public abstract class ClusterEvent extends OpenfireEvent {
 
+    public static final String NAMESPACE = "OPENFIRE_CLUSTER_CLUSTER";
+
     // -----------------------------------------------------------------------------------------------------------------
     public ClusterEvent(final String identifier) {
-        super(OpenfireEventNamespace.CLUSTER_CLUSTER, identifier);
+        super(NAMESPACE, identifier);
     }
 }

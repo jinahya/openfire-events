@@ -16,17 +16,18 @@
 package com.github.jinahya.openfire.event;
 
 import com.github.jinahya.openfire.OpenfireEvent;
-import com.github.jinahya.openfire.OpenfireEventNamespace;
 
 /**
  * An abstract class for events listenable via {@link org.jivesoftware.openfire.event.UserEventListener}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public abstract class UserEvent extends OpenfireEvent {
+public abstract class UserEvent extends OpenfireEvent<UserEventIdentifier> {
+
+    public static final String NAMESPACE = "OPENFIRE_EVENT_USER";
 
     // -----------------------------------------------------------------------------------------------------------------
     public UserEvent(final String identifier) {
-        super(OpenfireEventNamespace.EVENT_USER, identifier);
+        super(NAMESPACE, identifier);
     }
 }

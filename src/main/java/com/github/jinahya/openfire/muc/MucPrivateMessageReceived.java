@@ -24,9 +24,7 @@ import static java.util.Optional.ofNullable;
 
 public class MucPrivateMessageReceived extends MucEvent {
 
-    public static final String IDENTIFIER = "PRIVATE_MESSAGE_RECEIVED";
-
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public static MucPrivateMessageReceived of(final JID to, final JID from, final Message message) {
         final MucPrivateMessageReceived instance = new MucPrivateMessageReceived();
         instance.setTo(ofNullable(to).map(JidValue::of).orElse(null));
@@ -37,10 +35,10 @@ public class MucPrivateMessageReceived extends MucEvent {
 
     // -----------------------------------------------------------------------------------------------------------------
     public MucPrivateMessageReceived() {
-        super(IDENTIFIER);
+        super(MucEventIdentifier.PRIVATE_MESSAGE_RECEIVED.name());
     }
 
-    // ---------------------------------------------------------------------- to
+    // -------------------------------------------------------------------------------------------------------------- to
     public JidValue getTo() {
         return to;
     }
@@ -49,7 +47,7 @@ public class MucPrivateMessageReceived extends MucEvent {
         this.to = to;
     }
 
-    // -------------------------------------------------------------------- from
+    // ------------------------------------------------------------------------------------------------------------ from
     public JidValue getFrom() {
         return from;
     }
@@ -58,7 +56,7 @@ public class MucPrivateMessageReceived extends MucEvent {
         this.from = from;
     }
 
-    // ----------------------------------------------------------------- message
+    // --------------------------------------------------------------------------------------------------------- message
     public MessageValue getMessage() {
         return message;
     }
@@ -67,7 +65,7 @@ public class MucPrivateMessageReceived extends MucEvent {
         this.message = message;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private JidValue to;
 
     private JidValue from;

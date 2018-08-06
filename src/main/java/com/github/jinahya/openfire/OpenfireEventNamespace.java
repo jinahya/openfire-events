@@ -19,37 +19,22 @@ import org.jivesoftware.openfire.cluster.ClusterEventListener;
 
 import javax.xml.bind.annotation.XmlEnum;
 
-import static java.util.Objects.requireNonNull;
-
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 @XmlEnum
-public enum OpenfireEventNamespace {
+public enum OpenfireEventNamespace implements EventNamespace<OpenfireEventNamespace> {
 
-    @Deprecated
-    UNUSED("unused"),
     /**
      * The namespace for events listenable via {@link ClusterEventListener}.
      */
-    CLUSTER_CLUSTER("cluster.cluster"),
-    COMPONENT_COMPONENT("component.component"),
-    CONTAINER_PLUGIN("container.plugin"),
-    EVENT_GROUP("event.group"),
-    EVENT_USER("event.user"),
-    FILETRANSFER_FILETRANSFER("filetransfer.filetransfer"),
-    MUC_MUC("muc.muc");
+    OPENFIRE_CLUSTER_CLUSTER,
 
-    // -------------------------------------------------------------------------
-    OpenfireEventNamespace(final String namespace) {
-        this.namespace = requireNonNull(namespace, "namespace is null");
-    }
-
-    // -------------------------------------------------------------------------
-    public String getNamespace() {
-        return namespace;
-    }
-
-    // -------------------------------------------------------------------------
-    private final String namespace;
+    OPENFIRE_COMPONENT_COMPONENT,
+    OPENFIRE_COMPONENT_EXTERNALCOMPONENTMANAGER,
+    OPENFIRE_CONTAINER_PLUGIN,
+    OPENFIRE_EVENT_GROUP,
+    OPENFIRE_EVENT_USER,
+    OPENFIRE_EVENT_SESSION,
+    OPENFIRE_FILETRANSFER_FILETRANSFER,
+    OPENFIRE_MUC_MUC,
+    OPENFIRE_ROSTER,
+    OPENFIRE_USER_PRESENCE;
 }

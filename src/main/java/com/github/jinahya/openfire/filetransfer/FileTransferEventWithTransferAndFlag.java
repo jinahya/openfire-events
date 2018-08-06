@@ -22,19 +22,22 @@ import java.util.function.Supplier;
 /**
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-abstract class FileTransferEventWithTransferAndFlag
-        extends FileTransferEventWithTransfer {
+abstract class FileTransferEventWithTransferAndFlag extends FileTransferEventWithTransfer {
 
     // -------------------------------------------------------------------------
-    static <T extends FileTransferEventWithTransferAndFlag> T of(
-            final Supplier<T> supplier, final FileTransfer transfer,
-            final boolean flag) {
+    static <T extends FileTransferEventWithTransferAndFlag> T of(final Supplier<T> supplier,
+                                                                 final FileTransfer transfer, final boolean flag) {
         final T instance = of(supplier, transfer);
         instance.setFlag(flag);
         return instance;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    public FileTransferEventWithTransferAndFlag(final FileTransferEventIdentifier identifier) {
+        super(identifier);
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
     boolean getFlag() {
         return flag;
     }
@@ -43,6 +46,6 @@ abstract class FileTransferEventWithTransferAndFlag
         this.flag = flag;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private boolean flag;
 }

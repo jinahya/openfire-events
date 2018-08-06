@@ -38,7 +38,7 @@ abstract class GroupEventWithGroupAndParams extends GroupEvent {
     }
 
     // -----------------------------------------------------------------------------------------------------------------
-    public GroupEventWithGroupAndParams(final String identifier) {
+    public GroupEventWithGroupAndParams(final GroupEventIdentifier identifier) {
         super(identifier);
     }
 

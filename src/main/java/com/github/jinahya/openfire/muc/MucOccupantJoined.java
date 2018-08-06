@@ -19,8 +19,6 @@ import org.xmpp.packet.JID;
 
 public class MucOccupantJoined extends MucEventWithRoomUserAndNickname {
 
-    public static final String IDENTIFIER = "OCCUPANT_JOINED";
-
     // -----------------------------------------------------------------------------------------------------------------
     public static MucOccupantJoined of(final JID room, final JID user, final String nickname) {
         final MucOccupantJoined instance = of(MucOccupantJoined::new, room, user, nickname);
@@ -29,6 +27,6 @@ public class MucOccupantJoined extends MucEventWithRoomUserAndNickname {
 
     // -----------------------------------------------------------------------------------------------------------------
     public MucOccupantJoined() {
-        super(IDENTIFIER);
+        super(MucEventIdentifier.OCCUPANT_JOINED.name());
     }
 }

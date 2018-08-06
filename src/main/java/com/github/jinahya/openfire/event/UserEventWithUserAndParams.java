@@ -44,7 +44,7 @@ abstract class UserEventWithUserAndParams extends UserEvent {
     }
 
     // -----------------------------------------------------------------------------------------------------------------
-    public UserEventWithUserAndParams(final String identifier) {
+    public UserEventWithUserAndParams(final UserEventIdentifier identifier) {
         super(identifier);
     }
 

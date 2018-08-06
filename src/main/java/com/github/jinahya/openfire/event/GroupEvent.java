@@ -16,7 +16,6 @@
 package com.github.jinahya.openfire.event;
 
 import com.github.jinahya.openfire.OpenfireEvent;
-import com.github.jinahya.openfire.OpenfireEventNamespace;
 import org.jivesoftware.openfire.event.GroupEventListener;
 
 /**
@@ -26,8 +25,10 @@ import org.jivesoftware.openfire.event.GroupEventListener;
  */
 public abstract class GroupEvent extends OpenfireEvent {
 
+    public static final String NAMESPACE = "OPENFIRE_EVENT_GROUP";
+
     // -----------------------------------------------------------------------------------------------------------------
     public GroupEvent(final String identifier) {
-        super(OpenfireEventNamespace.EVENT_GROUP, identifier);
+        super(NAMESPACE, identifier);
     }
 }

@@ -22,15 +22,12 @@ import java.util.Map;
 public class UserEventUserDeleting extends UserEventWithUserAndParams {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "USER_DELETING";
-
-    // -----------------------------------------------------------------------------------------------------------------
     public static UserEventUserDeleting of(final User user, final Map<String, Object> params) {
         return of(UserEventUserDeleting::new, user, params);
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     public UserEventUserDeleting() {
-        super(IDENTIFIER);
+        super(UserEventIdentifier.USER_DELETING);
     }
 }

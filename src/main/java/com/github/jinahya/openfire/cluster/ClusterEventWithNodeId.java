@@ -22,33 +22,30 @@ import static java.util.Optional.ofNullable;
 
 abstract class ClusterEventWithNodeId extends ClusterEvent {
 
-    // -------------------------------------------------------------------------
-    static <T extends ClusterEventWithNodeId> T of(final Supplier<T> supplier,
-                                                   final byte[] nodeId) {
+    // -----------------------------------------------------------------------------------------------------------------
+    static <T extends ClusterEventWithNodeId> T of(final Supplier<T> supplier, final byte[] nodeId) {
         if (supplier == null) {
             throw new NullPointerException("supplier is null");
         }
         final T instance = supplier.get();
-        instance.setNodeId(
-                ofNullable(nodeId).map(v -> copyOf(v, v.length)).orElse(null));
+        instance.setNodeId(ofNullable(nodeId).map(v -> copyOf(v, v.length)).orElse(null));
         return instance;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public ClusterEventWithNodeId(final String identifier) {
         super(identifier);
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public byte[] getNodeId() {
         return ofNullable(nodeId).map(v -> copyOf(v, v.length)).orElse(null);
     }
 
     void setNodeId(final byte[] nodeId) {
-        this.nodeId
-                = ofNullable(nodeId).map(v -> copyOf(v, v.length)).orElse(null);
+        this.nodeId = ofNullable(nodeId).map(v -> copyOf(v, v.length)).orElse(null);
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private byte[] nodeId;
 }

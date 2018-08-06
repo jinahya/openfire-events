@@ -19,13 +19,7 @@ import org.jivesoftware.openfire.user.User;
 
 import java.util.Map;
 
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 public class UserEventUserModified extends UserEventWithUserAndParams {
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "USER_MODIFIED";
 
     // -----------------------------------------------------------------------------------------------------------------
     public static UserEventUserModified of(final User user, final Map<String, Object> params) {
@@ -35,6 +29,6 @@ public class UserEventUserModified extends UserEventWithUserAndParams {
 
     // -----------------------------------------------------------------------------------------------------------------
     public UserEventUserModified() {
-        super(IDENTIFIER);
+        super(UserEventIdentifier.USER_MODIFIED);
     }
 }

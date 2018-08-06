@@ -20,9 +20,6 @@ import org.xmpp.packet.JID;
 public class ComponentEventComponentRegistered extends ComponentEventWithComponent {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "COMPONENT_REGISTERED";
-
-    // -----------------------------------------------------------------------------------------------------------------
     public static ComponentEventComponentRegistered of(final JID component) {
         final ComponentEventComponentRegistered instance = of(ComponentEventComponentRegistered::new, component);
         return instance;
@@ -30,6 +27,6 @@ public class ComponentEventComponentRegistered extends ComponentEventWithCompone
 
     // -----------------------------------------------------------------------------------------------------------------
     public ComponentEventComponentRegistered() {
-        super(IDENTIFIER);
+        super(ComponentEventIdentifier.COMPONENT_REGISTERED);
     }
 }

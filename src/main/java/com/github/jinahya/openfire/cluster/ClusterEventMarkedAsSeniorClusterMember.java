@@ -18,17 +18,16 @@ package com.github.jinahya.openfire.cluster;
 import org.jivesoftware.openfire.cluster.ClusterEventListener;
 
 /**
- * An event represents
- * {@link ClusterEventListener#markedAsSeniorClusterMember()}.
+ * An event represents {@link ClusterEventListener#markedAsSeniorClusterMember()}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class ClusterEventMarkedAsSeniorClusterMember extends ClusterEvent {
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public static final String IDENTIFIER = "MARKED_AS_SENIOR_CLUSTER_MEMBER";
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public ClusterEventMarkedAsSeniorClusterMember() {
         super(IDENTIFIER);
     }

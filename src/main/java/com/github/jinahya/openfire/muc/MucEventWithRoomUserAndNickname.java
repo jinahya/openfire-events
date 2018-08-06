@@ -34,7 +34,7 @@ abstract class MucEventWithRoomUserAndNickname extends MucEventWithRoomAndUser {
         super(identifier);
     }
 
-    // -------------------------------------------------------------------------
+    // -------------------------------------------------------------------------------------------------------- nickname
     public String getNickname() {
         return nickname;
     }
@@ -43,6 +43,6 @@ abstract class MucEventWithRoomUserAndNickname extends MucEventWithRoomAndUser {
         this.nickname = nickname;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private String nickname;
 }

@@ -17,15 +17,16 @@ package com.github.jinahya.openfire.cluster;
 
 public class ClusterEventLeftClusterNode extends ClusterEventWithNodeId {
 
-    // -------------------------------------------------------------------------    
+    // -----------------------------------------------------------------------------------------------------------------
     public static final String IDENTIFIER = "LEFT_CLUSTER_NODE";
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public static ClusterEventLeftClusterNode of(final byte[] node) {
-        return of(ClusterEventLeftClusterNode::new, node);
+        final ClusterEventLeftClusterNode instance = of(ClusterEventLeftClusterNode::new, node);
+        return instance;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public ClusterEventLeftClusterNode() {
         super(IDENTIFIER);
     }

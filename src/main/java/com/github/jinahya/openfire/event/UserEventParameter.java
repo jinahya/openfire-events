@@ -7,6 +7,7 @@ import java.util.Objects;
 
 public class UserEventParameter {
 
+    // -----------------------------------------------------------------------------------------------------------------
     static UserEventParameter of(final String key, final Object value) {
         if (key == null) {
             throw new NullPointerException("key is null");
@@ -29,7 +30,7 @@ public class UserEventParameter {
         return key;
     }
 
-    public void setKey(final String key) {
+    void setKey(final String key) {
         this.key = key;
     }
 
@@ -38,7 +39,7 @@ public class UserEventParameter {
         return value;
     }
 
-    public void setValue(final String value) {
+    void setValue(final String value) {
         this.value = value;
     }
 

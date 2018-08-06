@@ -21,9 +21,6 @@ import org.xmpp.packet.JID;
 public class MucRoomSubjectChanged extends MucEventWithRoomAndUser {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "ROOM_SUBJECT_CHANGED";
-
-    // -----------------------------------------------------------------------------------------------------------------
     public static MucRoomSubjectChanged of(final JID room, final JID user, final String newSubject) {
         final MucRoomSubjectChanged instance = of(MucRoomSubjectChanged::new, room, user);
         instance.setSubject(newSubject);
@@ -32,10 +29,10 @@ public class MucRoomSubjectChanged extends MucEventWithRoomAndUser {
 
     // -----------------------------------------------------------------------------------------------------------------
     public MucRoomSubjectChanged() {
-        super(IDENTIFIER);
+        super(MucEventIdentifier.ROOM_SUBJECT_CHANGED.name());
     }
 
-    // -------------------------------------------------------------------- room
+    // ------------------------------------------------------------------------------------------------------------ room
     public JidValue getRoom() {
         return room;
     }
@@ -44,7 +41,7 @@ public class MucRoomSubjectChanged extends MucEventWithRoomAndUser {
         this.room = roomJID;
     }
 
-    // -------------------------------------------------------------------- user
+    // ------------------------------------------------------------------------------------------------------------ user
     public JidValue getUser() {
         return user;
     }
@@ -53,7 +50,7 @@ public class MucRoomSubjectChanged extends MucEventWithRoomAndUser {
         this.user = user;
     }
 
-    // ----------------------------------------------------------------- subject
+    // --------------------------------------------------------------------------------------------------------- subject
     public String getSubject() {
         return subject;
     }
@@ -62,7 +59,7 @@ public class MucRoomSubjectChanged extends MucEventWithRoomAndUser {
         this.subject = subject;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private JidValue room;
 
     private JidValue user;

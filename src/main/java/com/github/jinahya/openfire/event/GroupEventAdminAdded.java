@@ -27,8 +27,6 @@ import java.util.Map;
  */
 public class GroupEventAdminAdded extends GroupEventWithGroupAndParams {
 
-    public static final String IDENTIFIER = "ADMIN_ADDED";
-
     // -----------------------------------------------------------------------------------------------------------------
     public static GroupEventAdminAdded of(final Group group, final Map params) {
         final GroupEventAdminAdded instance = of(GroupEventAdminAdded::new, group, params);
@@ -37,6 +35,6 @@ public class GroupEventAdminAdded extends GroupEventWithGroupAndParams {
 
     // -----------------------------------------------------------------------------------------------------------------
     public GroupEventAdminAdded() {
-        super(IDENTIFIER);
+        super(GroupEventIdentifier.ADMIN_ADDED);
     }
 }

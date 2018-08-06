@@ -34,12 +34,12 @@ abstract class ComponentEventWithComponent extends ComponentEvent {
         return instance;
     }
 
-    // -------------------------------------------------------------------------
-    ComponentEventWithComponent(final String identifier) {
+    // -----------------------------------------------------------------------------------------------------------------
+    ComponentEventWithComponent(final ComponentEventIdentifier identifier) {
         super(identifier);
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public JidValue getComponent() {
         return component;
     }
@@ -48,6 +48,6 @@ abstract class ComponentEventWithComponent extends ComponentEvent {
         this.component = component;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private JidValue component;
 }

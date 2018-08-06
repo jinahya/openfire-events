@@ -17,8 +17,12 @@ package com.github.jinahya.openfire.filetransfer;
 
 import com.github.jinahya.openfire.OpenfireEvent;
 
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 public abstract class FileTransferEvent extends OpenfireEvent {
+
+    public static final String NAMESPACE = "OPENFIRE_FILETRANSFER_FILETRANSFER";
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public FileTransferEvent(final String identifier) {
+        super(NAMESPACE, identifier);
+    }
 }

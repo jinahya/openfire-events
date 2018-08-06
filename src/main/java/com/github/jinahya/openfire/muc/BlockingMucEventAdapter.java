@@ -22,17 +22,14 @@ import org.xmpp.packet.Message;
 
 import java.util.concurrent.BlockingQueue;
 
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 public class BlockingMucEventAdapter extends BlockingEventAdapter<MucEvent> implements MUCEventListener {
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public BlockingMucEventAdapter(final BlockingQueue<? super MucEvent> queue) {
         super(queue);
     }
 
-    // ----------------------------------------------------------------- message
+    // --------------------------------------------------------------------------------------------------------- message
     @Override
     public void messageReceived(final JID room, final JID user, final String nickname, final Message message) {
         final boolean offered
@@ -44,7 +41,7 @@ public class BlockingMucEventAdapter extends BlockingEventAdapter<MucEvent> impl
         final boolean offered = offer(MucPrivateMessageReceived.of(to, from, message));
     }
 
-    // ---------------------------------------------------------------- occupant
+    // -------------------------------------------------------------------------------------------------------- occupant
     @Override
     public void occupantJoined(final JID room, final JID user, final String nickname) {
         final boolean offered = offer(MucOccupantJoined.of(room, user, nickname));
@@ -60,7 +57,7 @@ public class BlockingMucEventAdapter extends BlockingEventAdapter<MucEvent> impl
         final boolean offered = offer(MucNicknameChanged.of(room, user, oldNickname, newNickname));
     }
 
-    // -------------------------------------------------------------------- room
+    // ------------------------------------------------------------------------------------------------------------ room
     @Override
     public void roomCreated(final JID room) {
         final boolean offered = offer(MucRoomCreated.of(room));

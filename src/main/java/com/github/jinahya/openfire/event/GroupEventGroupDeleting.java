@@ -25,9 +25,6 @@ import java.util.Map;
 public class GroupEventGroupDeleting extends GroupEventWithGroupAndParams {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "GROUP_DELETING";
-
-    // -----------------------------------------------------------------------------------------------------------------
     public static GroupEventGroupDeleting of(final Group group, final Map params) {
         final GroupEventGroupDeleting instance = of(GroupEventGroupDeleting::new, group, params);
         return instance;
@@ -35,6 +32,6 @@ public class GroupEventGroupDeleting extends GroupEventWithGroupAndParams {
 
     // -----------------------------------------------------------------------------------------------------------------
     public GroupEventGroupDeleting() {
-        super(IDENTIFIER);
+        super(GroupEventIdentifier.GROUP_DELETING);
     }
 }

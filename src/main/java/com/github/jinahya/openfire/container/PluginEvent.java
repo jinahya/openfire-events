@@ -16,12 +16,14 @@
 package com.github.jinahya.openfire.container;
 
 import com.github.jinahya.openfire.OpenfireEvent;
-import com.github.jinahya.openfire.OpenfireEventNamespace;
 
 public abstract class PluginEvent extends OpenfireEvent {
 
     // -----------------------------------------------------------------------------------------------------------------
+    public static final String NAMESPACE = "OPENFIRE_CONTAINER_PLUGIN";
+
+    // -----------------------------------------------------------------------------------------------------------------
     public PluginEvent(final String identifier) {
-        super(OpenfireEventNamespace.CONTAINER_PLUGIN, identifier);
+        super(NAMESPACE, identifier);
     }
 }

@@ -20,15 +20,12 @@ import org.xmpp.packet.JID;
 public class MucOccupantLeft extends MucEventWithRoomAndUser {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "OCCUPANT_LEFT";
-
-    // -------------------------------------------------------------------------
     public static MucOccupantLeft of(final JID room, final JID user) {
         return of(MucOccupantLeft::new, room, user);
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     public MucOccupantLeft() {
-        super(IDENTIFIER);
+        super(MucEventIdentifier.OCCUPANT_LEFT.name());
     }
 }

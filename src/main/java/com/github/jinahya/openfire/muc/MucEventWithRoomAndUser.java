@@ -34,11 +34,12 @@ abstract class MucEventWithRoomAndUser extends MucEventWithRoom {
         return instance;
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
     MucEventWithRoomAndUser(final String identifier) {
         super(identifier);
     }
 
-    // -------------------------------------------------------------------- user
+    // ------------------------------------------------------------------------------------------------------------ user
     public JidValue getUser() {
         return user;
     }

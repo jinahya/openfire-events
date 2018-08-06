@@ -25,11 +25,6 @@ import org.jivesoftware.openfire.container.PluginListener;
  */
 public class PluginEventPluginCreated extends PluginEventWithName {
 
-    // -----------------------------------------------------------------------------------------------------------------
-
-    /**
-     * The identifier of this event. The value is {@value IDENTIFIER}.
-     */
     public static final String IDENTIFIER = "PLUGIN_CREATED";
 
     // -----------------------------------------------------------------------------------------------------------------

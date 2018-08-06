@@ -16,7 +16,6 @@
 package com.github.jinahya.openfire.component;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
-import com.github.jinahya.openfire.component.externalcomponentmanager.ExternalComponentManagerEvent;
 import org.jivesoftware.openfire.component.ExternalComponentConfiguration;
 import org.jivesoftware.openfire.component.ExternalComponentManager;
 import org.jivesoftware.openfire.component.ExternalComponentManagerListener;

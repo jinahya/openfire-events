@@ -19,13 +19,7 @@ import org.jivesoftware.openfire.group.Group;
 
 import java.util.Map;
 
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 public class GroupEventMemberRemoved extends GroupEventWithGroupAndParams {
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "MEMBER_REMOVED";
 
     // -----------------------------------------------------------------------------------------------------------------
     public static GroupEventMemberRemoved of(final Group group, Map params) {
@@ -35,6 +29,6 @@ public class GroupEventMemberRemoved extends GroupEventWithGroupAndParams {
 
     // -----------------------------------------------------------------------------------------------------------------
     public GroupEventMemberRemoved() {
-        super(IDENTIFIER);
+        super(GroupEventIdentifier.MEMBER_REMOVED);
     }
 }

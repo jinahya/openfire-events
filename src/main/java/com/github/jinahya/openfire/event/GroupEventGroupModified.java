@@ -19,13 +19,7 @@ import org.jivesoftware.openfire.group.Group;
 
 import java.util.Map;
 
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 public class GroupEventGroupModified extends GroupEventWithGroupAndParams {
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "GROUP_MODIFIED";
 
     // -----------------------------------------------------------------------------------------------------------------
     public static GroupEventGroupModified of(final Group group, final Map params) {
@@ -35,6 +29,6 @@ public class GroupEventGroupModified extends GroupEventWithGroupAndParams {
 
     // -----------------------------------------------------------------------------------------------------------------
     public GroupEventGroupModified() {
-        super(IDENTIFIER);
+        super(GroupEventIdentifier.GROUP_MODIFIED);
     }
 }

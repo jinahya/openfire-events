@@ -21,9 +21,6 @@ package com.github.jinahya.openfire.container;
 public class PluginEventPluginDestroyed extends PluginEventWithName {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "PLUGIN_DESTROYED";
-
-    // -----------------------------------------------------------------------------------------------------------------
     public static PluginEventPluginDestroyed of(final String name) {
         final PluginEventPluginDestroyed instance = of(PluginEventPluginDestroyed::new, name);
         return instance;
@@ -31,6 +28,6 @@ public class PluginEventPluginDestroyed extends PluginEventWithName {
 
     // -----------------------------------------------------------------------------------------------------------------
     public PluginEventPluginDestroyed() {
-        super(IDENTIFIER);
+        super(PluginEventIdentifier.PLUGIN_DESTROYED);
     }
 }

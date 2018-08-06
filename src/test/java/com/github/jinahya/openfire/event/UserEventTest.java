@@ -7,7 +7,7 @@ import com.github.jinahya.openfire.OpenfireEventTest;
  *
  * @param <T> subclass type parameter
  */
-public abstract class UserEventTest<T extends UserEvent> extends OpenfireEventTest<T> {
+public abstract class UserEventTest<T extends UserEvent> extends OpenfireEventTest<T, UserEventIdentifier> {
 
     // -----------------------------------------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ public abstract class UserEventTest<T extends UserEvent> extends OpenfireEventTe
      * @param eventClass the event class to test.
      */
     public UserEventTest(final Class<T> eventClass) {
-        super(eventClass);
+        super(eventClass, UserEventIdentifier.class);
     }
 
     // -----------------------------------------------------------------------------------------------------------------

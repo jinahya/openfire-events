@@ -15,30 +15,28 @@
  */
 package com.github.jinahya.openfire.event;
 
+import org.jivesoftware.openfire.event.UserEventListener;
 import org.jivesoftware.openfire.user.User;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Map;
 
 /**
- * An event for {@link org.jivesoftware.openfire.event.UserEventListener#userCreated(org.jivesoftware.openfire.user.User,
- * java.util.Map)}.
+ * An event for {@link UserEventListener#userCreated(org.jivesoftware.openfire.user.User, java.util.Map)}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 @XmlRootElement
 public class UserEventUserCreated extends UserEventWithUserAndParams {
 
-    // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "USER_CREATED";
-
     // -------------------------------------------------------------------------
     public static UserEventUserCreated of(final User user, final Map<String, Object> params) {
-        return of(UserEventUserCreated::new, user, params);
+        final UserEventUserCreated instance = of(UserEventUserCreated::new, user, params);
+        return instance;
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     public UserEventUserCreated() {
-        super(IDENTIFIER);
+        super(UserEventIdentifier.USER_CREATED);
     }
 }

@@ -16,7 +16,6 @@
 package com.github.jinahya.openfire.component;
 
 import com.github.jinahya.openfire.OpenfireEvent;
-import com.github.jinahya.openfire.OpenfireEventNamespace;
 import org.jivesoftware.openfire.component.ComponentEventListener;
 
 /**
@@ -26,8 +25,11 @@ import org.jivesoftware.openfire.component.ComponentEventListener;
  */
 public abstract class ComponentEvent extends OpenfireEvent {
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    public static final String NAMESPACE = "OPENFIRE_COMPONENT_COMPONENT";
+
+    // -----------------------------------------------------------------------------------------------------------------
     public ComponentEvent(final String identifier) {
-        super(OpenfireEventNamespace.COMPONENT_COMPONENT, identifier);
+        super(NAMESPACE, identifier);
     }
 }

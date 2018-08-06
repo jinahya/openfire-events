@@ -27,8 +27,7 @@ import java.util.concurrent.BlockingQueue;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class BlockingComponentEventAdapter
-        extends BlockingEventAdapter<ComponentEvent>
+public class BlockingComponentEventAdapter extends BlockingEventAdapter<ComponentEvent>
         implements ComponentEventListener {
 
     // -------------------------------------------------------------------------

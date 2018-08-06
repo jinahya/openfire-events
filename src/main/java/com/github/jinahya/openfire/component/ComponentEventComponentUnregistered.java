@@ -19,16 +19,14 @@ import org.xmpp.packet.JID;
 
 public class ComponentEventComponentUnregistered extends ComponentEventWithComponent {
 
-    // -------------------------------------------------------------------------
-    public static final String IDENTIFIER = "COMPONENT_UNREGISTERED";
-
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public static ComponentEventComponentUnregistered of(final JID component) {
-        return of(ComponentEventComponentUnregistered::new, component);
+        final ComponentEventComponentUnregistered instance = of(ComponentEventComponentUnregistered::new, component);
+        return instance;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public ComponentEventComponentUnregistered() {
-        super(IDENTIFIER);
+        super(ComponentEventIdentifier.COMPONENT_UNREGISTERED);
     }
 }

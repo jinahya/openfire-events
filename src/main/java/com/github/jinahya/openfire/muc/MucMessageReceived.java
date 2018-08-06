@@ -21,14 +21,9 @@ import org.xmpp.packet.Message;
 
 import static java.util.Optional.ofNullable;
 
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 public class MucMessageReceived extends MucEventWithRoomUserAndNickname {
 
-    public static final String IDENTIFIER = "MESSAGE_RECEIVED";
-
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public static MucMessageReceived of(final JID room, final JID user, final String nickname, final Message message) {
         final MucMessageReceived instance = of(MucMessageReceived::new, room, user, nickname);
         instance.setMessage(ofNullable(message).map(MessageValue::of).orElse(null));
@@ -37,10 +32,10 @@ public class MucMessageReceived extends MucEventWithRoomUserAndNickname {
 
     // -----------------------------------------------------------------------------------------------------------------
     public MucMessageReceived() {
-        super(IDENTIFIER);
+        super(MucEventIdentifier.MESSAGE_RECEIVED.name());
     }
 
-    // ----------------------------------------------------------------- message
+    // --------------------------------------------------------------------------------------------------------- message
     public MessageValue getMessage() {
         return message;
     }
@@ -49,6 +44,6 @@ public class MucMessageReceived extends MucEventWithRoomUserAndNickname {
         this.message = message;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private MessageValue message;
 }

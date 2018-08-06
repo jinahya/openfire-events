@@ -15,7 +15,8 @@ public class JaxbTest {
     void printXmlSchema() throws JAXBException, IOException {
         final JAXBContext context = JAXBContext.newInstance(
                 "com.github.jinahya.openfire.event"
-                + ":com.github.jinahya.openfire.user"
+                //+ ":"
+                //"com.github.jinahya.openfire.user"
         );
         context.generateSchema(new SchemaOutputResolver() {
             @Override

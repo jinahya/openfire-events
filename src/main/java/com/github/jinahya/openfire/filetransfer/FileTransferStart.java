@@ -16,20 +16,32 @@
 package com.github.jinahya.openfire.filetransfer;
 
 import org.jivesoftware.openfire.filetransfer.FileTransfer;
+import org.jivesoftware.openfire.filetransfer.FileTransferEventListener;
 
 /**
+ * An event for {@link FileTransferEventListener#fileTransferStart(FileTransfer, boolean)}.
+ *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class FileTransferStart extends FileTransferEventWithTransferAndFlag {
 
-    // -------------------------------------------------------------------------
-    public static FileTransferStart of(
-            final FileTransfer transfer, final boolean ready) {
-        return of(FileTransferStart::new, transfer, ready);
+    // -----------------------------------------------------------------------------------------------------------------
+    public static FileTransferStart of(final FileTransfer transfer, final boolean ready) {
+        final FileTransferStart instance = of(FileTransferStart::new, transfer, ready);
+        return instance;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    public FileTransferStart() {
+        super(FileTransferEventIdentifier.TRANSFER_START);
+    }
+
+    // ----------------------------------------------------------------------------------------------------------- ready
     public boolean isReady() {
         return getFlag();
+    }
+
+    void setReady(final boolean ready) {
+        setFlag(ready);
     }
 }

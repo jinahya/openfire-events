@@ -22,21 +22,19 @@ import static java.util.Optional.ofNullable;
 
 public class ComponentEventComponentInfoReceived extends ComponentEvent {
 
-    public static final String IDENTIFIER = "COMPONENT_INFO_RECEIVED";
-
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public static ComponentEventComponentInfoReceived of(final IQ iq) {
         final ComponentEventComponentInfoReceived instance = new ComponentEventComponentInfoReceived();
         instance.setIq(ofNullable(iq).map(IqValue::of).orElse(null));
         return instance;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public ComponentEventComponentInfoReceived() {
-        super(IDENTIFIER);
+        super(ComponentEventIdentifier.COMPONENT_INFO_RECEIVED);
     }
 
-    // ---------------------------------------------------------------------- iq
+    // -------------------------------------------------------------------------------------------------------------- iq
     public IqValue getIq() {
         return iq;
     }
@@ -45,6 +43,6 @@ public class ComponentEventComponentInfoReceived extends ComponentEvent {
         this.iq = iq;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private IqValue iq;
 }

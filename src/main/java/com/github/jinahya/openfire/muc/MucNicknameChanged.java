@@ -19,9 +19,7 @@ import org.xmpp.packet.JID;
 
 public class MucNicknameChanged extends MucEventWithRoomAndUser {
 
-    public static final String IDENTIFIER = "NICKNAME_CHANGED";
-
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public static MucNicknameChanged of(final JID room, final JID user, final String oldNickname,
                                         final String newNickname) {
         final MucNicknameChanged instance = of(MucNicknameChanged::new, room, user);
@@ -32,10 +30,10 @@ public class MucNicknameChanged extends MucEventWithRoomAndUser {
 
     // -----------------------------------------------------------------------------------------------------------------
     public MucNicknameChanged() {
-        super(IDENTIFIER);
+        super(MucEventIdentifier.NICKNAME_CHANGED.name());
     }
 
-    // ------------------------------------------------------------- oldNickname
+    // ----------------------------------------------------------------------------------------------------- oldNickname
     public String getOldNickname() {
         return oldNickname;
     }
@@ -44,7 +42,7 @@ public class MucNicknameChanged extends MucEventWithRoomAndUser {
         this.oldNickname = oldNickname;
     }
 
-    // ------------------------------------------------------------- newNickname
+    // ----------------------------------------------------------------------------------------------------- newNickname
     public String getNewNickname() {
         return newNickname;
     }
@@ -53,7 +51,7 @@ public class MucNicknameChanged extends MucEventWithRoomAndUser {
         this.newNickname = newNickname;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     private String oldNickname;
 
     private String newNickname;

@@ -21,20 +21,21 @@ import java.util.function.Supplier;
 
 import static java.util.Optional.ofNullable;
 
-/**
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
 abstract class FileTransferEventWithTransfer extends FileTransferEvent {
 
-    static <T extends FileTransferEventWithTransfer> T of(
-            final Supplier<T> suppiler, final FileTransfer transfer) {
-        if (suppiler == null) {
+    // -----------------------------------------------------------------------------------------------------------------
+    static <T extends FileTransferEventWithTransfer> T of(final Supplier<T> supplier, final FileTransfer transfer) {
+        if (supplier == null) {
             throw new NullPointerException("supplier is null");
         }
-        final T instance = suppiler.get();
-        instance.setTransfer(
-                ofNullable(transfer).map(FileTransferValue::of).orElse(null));
+        final T instance = supplier.get();
+        instance.setTransfer(ofNullable(transfer).map(FileTransferValue::of).orElse(null));
         return instance;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public FileTransferEventWithTransfer(final FileTransferEventIdentifier identifier) {
+        super(identifier);
     }
 
     // -------------------------------------------------------------------------
@@ -42,7 +43,7 @@ abstract class FileTransferEventWithTransfer extends FileTransferEvent {
         return transfer;
     }
 
-    public void setTransfer(final FileTransferValue transfer) {
+    void setTransfer(final FileTransferValue transfer) {
         this.transfer = transfer;
     }
 

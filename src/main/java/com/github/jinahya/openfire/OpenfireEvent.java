@@ -15,105 +15,10 @@
  */
 package com.github.jinahya.openfire;
 
-import javax.xml.bind.annotation.XmlElement;
-import java.util.Objects;
-
-import static java.util.Objects.requireNonNull;
-
-/**
- * An abstract class for openfire event.
- *
- * @param <E> identifier type parameter
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public abstract class OpenfireEvent<E extends Enum<E> & OpenfireEventIdentifier<E>> {
+public abstract class OpenfireEvent extends Event {
 
     // -----------------------------------------------------------------------------------------------------------------
-    @Deprecated
-    public OpenfireEvent() {
-        this(OpenfireEventNamespace.UNUSED, "illegal");
+    public OpenfireEvent(final String namespace, final String identifier) {
+        super(namespace, identifier);
     }
-
-    public OpenfireEvent(final OpenfireEventNamespace namespace, final String identifier) {
-        super();
-        this.namespace = requireNonNull(namespace, "namespace is null");
-        this.identifier = requireNonNull(identifier, "identifier is null");
-        this.timestamp = System.nanoTime();
-    }
-
-    public <E extends Enum<E> & OpenfireEventIdentifier<E>> OpenfireEvent(final OpenfireEventNamespace namespace, final E identifier) {
-        super();
-        this.namespace = requireNonNull(namespace, "namespace is null");
-        //this.identifier = requireNonNull(identifier, "identifier is null");
-        this.identifier = null;
-        this.timestamp = System.nanoTime();
-    }
-
-    // -----------------------------------------------------------------------------------------------------------------
-    @Override
-    public String toString() {
-        return super.toString() + "{"
-               + "namespace=" + namespace
-               + ",identifier=" + identifier
-               + ",timestamp=" + timestamp
-               + "}";
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 17 * hash + Objects.hashCode(namespace);
-        hash = 17 * hash + Objects.hashCode(identifier);
-        hash = 17 * hash + (int) (timestamp ^ (timestamp >>> 32));
-        return hash;
-    }
-
-    @Override
-    public boolean equals(final Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final OpenfireEvent other = (OpenfireEvent) obj;
-        if (timestamp != other.timestamp) {
-            return false;
-        }
-        if (!Objects.equals(identifier, other.identifier)) {
-            return false;
-        }
-        if (namespace != other.namespace) {
-            return false;
-        }
-        return true;
-    }
-
-    // ------------------------------------------------------------------------------------------------------- namespace
-    public OpenfireEventNamespace getNamespace() {
-        return namespace;
-    }
-
-    // ------------------------------------------------------------------------------------------------------ identifier
-    public String getIdentifier() {
-        return identifier;
-    }
-
-    // ------------------------------------------------------------------------------------------------------- timestamp
-    public long getTimestamp() {
-        return timestamp;
-    }
-
-    // -----------------------------------------------------------------------------------------------------------------
-    @XmlElement(required = true)
-    private final OpenfireEventNamespace namespace;
-
-    @XmlElement(required = true)
-    private final String identifier;
-
-    @XmlElement(required = true)
-    private final long timestamp;
 }

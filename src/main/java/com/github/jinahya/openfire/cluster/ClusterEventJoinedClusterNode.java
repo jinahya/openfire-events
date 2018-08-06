@@ -17,15 +17,14 @@ package com.github.jinahya.openfire.cluster;
 
 public class ClusterEventJoinedClusterNode extends ClusterEventWithNodeId {
 
-    // -------------------------------------------------------------------------
     public static final String IDENTIFIER = "JOINED_CLUSTER_NODE";
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public static ClusterEventJoinedClusterNode of(final byte[] nodeId) {
         return of(ClusterEventJoinedClusterNode::new, nodeId);
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     public ClusterEventJoinedClusterNode() {
         super(IDENTIFIER);
     }

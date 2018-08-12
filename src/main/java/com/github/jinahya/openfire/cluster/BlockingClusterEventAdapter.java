@@ -50,6 +50,7 @@ public class BlockingClusterEventAdapter extends BlockingEventAdapter<ClusterEve
                                       ClusterEventPayloadJoinedClusterWithNodeId.of(nodeId));
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
     @Override
     public void leftCluster() {
         final boolean offered = offer(ClusterEventIdentifier.LEFT_CLUSTER, new ClusterEventPayloadLeftCluster());
@@ -61,6 +62,7 @@ public class BlockingClusterEventAdapter extends BlockingEventAdapter<ClusterEve
                                       ClusterEventPayloadLeftClusterNode.of(nodeId));
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
     @Override
     public void markedAsSeniorClusterMember() {
         final boolean offered = offer(ClusterEventIdentifier.MARKED_AS_SENIOR_CLUSTER_MEMBER,

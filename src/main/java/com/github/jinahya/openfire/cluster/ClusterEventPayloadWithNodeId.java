@@ -15,11 +15,14 @@
  */
 package com.github.jinahya.openfire.cluster;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.function.Supplier;
 
 import static java.util.Arrays.copyOf;
 import static java.util.Optional.ofNullable;
 
+@XmlTransient
 abstract class ClusterEventPayloadWithNodeId implements ClusterEventPayload {
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -42,5 +45,6 @@ abstract class ClusterEventPayloadWithNodeId implements ClusterEventPayload {
     }
 
     // -----------------------------------------------------------------------------------------------------------------
+    @XmlElement
     private byte[] nodeId;
 }

@@ -17,13 +17,14 @@ package com.github.jinahya.openfire.cluster;
 
 import org.jivesoftware.openfire.cluster.ClusterEventListener;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * An event represents {@link ClusterEventListener#markedAsSeniorClusterMember()}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
+@XmlRootElement
 public class ClusterEventPayloadMarkedAsSeniorClusterMember implements ClusterEventPayload {
 
-    // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "MARKED_AS_SENIOR_CLUSTER_MEMBER";
 }

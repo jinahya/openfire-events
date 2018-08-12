@@ -2,9 +2,6 @@ package com.github.jinahya.openfire.cluster;
 
 import com.github.jinahya.openfire.EventIdentifier;
 
-import javax.xml.bind.annotation.XmlEnum;
-
-@XmlEnum
 public enum ClusterEventIdentifier implements EventIdentifier {
 
     // -----------------------------------------------------------------------------------------------------------------

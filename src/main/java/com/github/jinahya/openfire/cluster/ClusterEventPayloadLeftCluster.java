@@ -15,6 +15,9 @@
  */
 package com.github.jinahya.openfire.cluster;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class ClusterEventPayloadLeftCluster implements ClusterEventPayload {
 
     // -----------------------------------------------------------------------------------------------------------------

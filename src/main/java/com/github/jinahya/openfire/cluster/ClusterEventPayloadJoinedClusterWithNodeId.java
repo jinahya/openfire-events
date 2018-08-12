@@ -15,13 +15,15 @@
  */
 package com.github.jinahya.openfire.cluster;
 
-public class ClusterEventLeftCluster extends ClusterEvent {
+public class ClusterEventPayloadJoinedClusterWithNodeId extends ClusterEventPayloadWithNodeId {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "LEFT_CLUSTER";
+    public static final String IDENTIFIER = "JOINED_CLUSTER_WITH_NODE_ID";
 
     // -----------------------------------------------------------------------------------------------------------------
-    public ClusterEventLeftCluster() {
-        super(IDENTIFIER);
+    public static ClusterEventPayloadJoinedClusterWithNodeId of(final byte[] nodeId) {
+        final ClusterEventPayloadJoinedClusterWithNodeId instance
+                = of(ClusterEventPayloadJoinedClusterWithNodeId::new, nodeId);
+        return instance;
     }
 }

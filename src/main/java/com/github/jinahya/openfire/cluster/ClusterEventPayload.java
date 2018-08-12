@@ -15,17 +15,13 @@
  */
 package com.github.jinahya.openfire.cluster;
 
-public class ClusterEventJoinedClusterNode extends ClusterEventWithNodeId {
+import com.github.jinahya.openfire.EventPayload;
 
-    public static final String IDENTIFIER = "JOINED_CLUSTER_NODE";
+/**
+ * An abstract class for events listenable via {@link org.jivesoftware.openfire.cluster.ClusterEventListener}.
+ *
+ * @author Jin Kwon &lt;onacit_at_gmail.com&gt;
+ */
+public interface ClusterEventPayload extends EventPayload {
 
-    // -----------------------------------------------------------------------------------------------------------------
-    public static ClusterEventJoinedClusterNode of(final byte[] nodeId) {
-        return of(ClusterEventJoinedClusterNode::new, nodeId);
-    }
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public ClusterEventJoinedClusterNode() {
-        super(IDENTIFIER);
-    }
 }

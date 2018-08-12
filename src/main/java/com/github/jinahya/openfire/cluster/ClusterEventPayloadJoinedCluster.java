@@ -13,12 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.jinahya.openfire;
+package com.github.jinahya.openfire.cluster;
 
-public abstract class OpenfireEvent extends Event {
+public class ClusterEventPayloadJoinedCluster implements ClusterEventPayload {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public OpenfireEvent(final String namespace, final String identifier) {
-        super(namespace, identifier);
-    }
+    public static final String IDENTIFIER = "JOINED_CLUSTER";
 }

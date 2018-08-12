@@ -15,9 +15,9 @@
  */
 package com.github.jinahya.openfire.muc;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 
-public abstract class MucEvent extends OpenfireEvent {
+public abstract class MucEvent extends Event<OpenfireEventPayload> {
 
     public static final String NAMESPACE = "OPENFIRE_MUC_MUC";
 

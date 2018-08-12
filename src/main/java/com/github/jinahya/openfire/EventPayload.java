@@ -1,5 +1,5 @@
 package com.github.jinahya.openfire;
 
-public interface EventIdentifier {
+public interface EventPayload {
 
 }

@@ -15,7 +15,7 @@
  */
 package com.github.jinahya.openfire.event;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 import org.jivesoftware.openfire.event.GroupEventListener;
 
 /**
@@ -23,7 +23,7 @@ import org.jivesoftware.openfire.event.GroupEventListener;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public abstract class GroupEvent extends OpenfireEvent {
+public abstract class GroupEvent extends Event<OpenfireEventPayload> {
 
     public static final String NAMESPACE = "OPENFIRE_EVENT_GROUP";
 

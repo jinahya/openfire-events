@@ -20,10 +20,10 @@ import java.util.function.Supplier;
 import static java.util.Arrays.copyOf;
 import static java.util.Optional.ofNullable;
 
-abstract class ClusterEventWithNodeId extends ClusterEvent {
+abstract class ClusterEventPayloadWithNodeId implements ClusterEventPayload {
 
     // -----------------------------------------------------------------------------------------------------------------
-    static <T extends ClusterEventWithNodeId> T of(final Supplier<T> supplier, final byte[] nodeId) {
+    static <T extends ClusterEventPayloadWithNodeId> T of(final Supplier<T> supplier, final byte[] nodeId) {
         if (supplier == null) {
             throw new NullPointerException("supplier is null");
         }
@@ -32,12 +32,7 @@ abstract class ClusterEventWithNodeId extends ClusterEvent {
         return instance;
     }
 
-    // -----------------------------------------------------------------------------------------------------------------
-    public ClusterEventWithNodeId(final String identifier) {
-        super(identifier);
-    }
-
-    // -----------------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------- nodeId
     public byte[] getNodeId() {
         return ofNullable(nodeId).map(v -> copyOf(v, v.length)).orElse(null);
     }

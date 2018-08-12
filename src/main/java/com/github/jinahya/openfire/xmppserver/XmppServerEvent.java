@@ -15,8 +15,6 @@
  */
 package com.github.jinahya.openfire.xmppserver;
 
-import com.github.jinahya.openfire.OpenfireEvent;
-
 /**
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */

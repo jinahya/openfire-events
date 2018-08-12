@@ -15,10 +15,10 @@
  */
 package com.github.jinahya.openfire.roster;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 import com.github.jinahya.openfire.OpenfireEventNamespace;
 
-public abstract class RosterEvent extends OpenfireEvent<RosterEventIdentifier> {
+public abstract class RosterEvent extends Event<OpenfireEventPayload> {
 
     // -----------------------------------------------------------------------------------------------------------------
     public RosterEvent(final RosterEventIdentifier identifier) {

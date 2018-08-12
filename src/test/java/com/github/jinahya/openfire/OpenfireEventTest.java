@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
 
-public abstract class OpenfireEventTest<T extends OpenfireEvent<I>, I extends Enum<I> & OpenfireEventIdentifier<I>>
+public abstract class OpenfireEventTest<T extends Event<OpenfireEventPayload>, I extends Enum<I> & OpenfireEventIdentifier<I>>
         extends EventTest<T, OpenfireEventNamespace, I> {
 
     private static final Logger logger = getLogger(lookup().lookupClass());

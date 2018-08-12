@@ -15,9 +15,9 @@
  */
 package com.github.jinahya.openfire.component;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 
-public abstract class ExternalComponentManagerEvent extends OpenfireEvent {
+public abstract class ExternalComponentManagerEvent extends Event<OpenfireEventPayload> {
 
     // -----------------------------------------------------------------------------------------------------------------
     public static final String NAMESPACE = "OPENFIRE_COMPONENT_EXTERNAL_COMPONENT_MANAGER";

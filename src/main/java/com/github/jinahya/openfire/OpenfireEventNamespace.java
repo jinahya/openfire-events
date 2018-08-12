@@ -20,7 +20,7 @@ import org.jivesoftware.openfire.cluster.ClusterEventListener;
 import javax.xml.bind.annotation.XmlEnum;
 
 @XmlEnum
-public enum OpenfireEventNamespace implements EventNamespace<OpenfireEventNamespace> {
+public enum OpenfireEventNamespace {
 
     /**
      * The namespace for events listenable via {@link ClusterEventListener}.

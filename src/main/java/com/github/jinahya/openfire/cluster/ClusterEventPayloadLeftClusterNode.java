@@ -15,20 +15,14 @@
  */
 package com.github.jinahya.openfire.cluster;
 
-import org.jivesoftware.openfire.cluster.ClusterEventListener;
-
-/**
- * An event represents {@link ClusterEventListener#markedAsSeniorClusterMember()}.
- *
- * @author Jin Kwon &lt;onacit at gmail.com&gt;
- */
-public class ClusterEventMarkedAsSeniorClusterMember extends ClusterEvent {
+public class ClusterEventPayloadLeftClusterNode extends ClusterEventPayloadWithNodeId {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "MARKED_AS_SENIOR_CLUSTER_MEMBER";
+    public static final String IDENTIFIER = "LEFT_CLUSTER_WITH_NODE_ID";
 
     // -----------------------------------------------------------------------------------------------------------------
-    public ClusterEventMarkedAsSeniorClusterMember() {
-        super(IDENTIFIER);
+    public static ClusterEventPayloadLeftClusterNode of(final byte[] nodeId) {
+        final ClusterEventPayloadLeftClusterNode instance = of(ClusterEventPayloadLeftClusterNode::new, nodeId);
+        return instance;
     }
 }

@@ -15,7 +15,7 @@
  */
 package com.github.jinahya.openfire.component;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 import org.jivesoftware.openfire.component.ComponentEventListener;
 
 /**
@@ -23,7 +23,7 @@ import org.jivesoftware.openfire.component.ComponentEventListener;
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public abstract class ComponentEvent extends OpenfireEvent {
+public abstract class ComponentEvent extends Event<OpenfireEventPayload> {
 
     // -----------------------------------------------------------------------------------------------------------------
     public static final String NAMESPACE = "OPENFIRE_COMPONENT_COMPONENT";

@@ -16,11 +16,16 @@
 package com.github.jinahya.openfire.cluster;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
+import com.github.jinahya.openfire.Event;
 import org.jivesoftware.openfire.cluster.ClusterEventListener;
 
 import java.util.concurrent.BlockingQueue;
 
-public class BlockingClusterEventAdapter extends BlockingEventAdapter<ClusterEvent> implements ClusterEventListener {
+public class BlockingClusterEventAdapter extends BlockingEventAdapter<ClusterEventPayload>
+        implements ClusterEventListener {
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public static final String NAMESPACE = "OPENFIRE_CLUSTER_CLUSTER";
 
     // -----------------------------------------------------------------------------------------------------------------
 
@@ -29,33 +34,36 @@ public class BlockingClusterEventAdapter extends BlockingEventAdapter<ClusterEve
      *
      * @param queue a queue to which events are offered.
      */
-    public BlockingClusterEventAdapter(final BlockingQueue<? super ClusterEvent> queue) {
-        super(queue);
+    public BlockingClusterEventAdapter(final BlockingQueue<Event<? super ClusterEventPayload>> queue) {
+        super(NAMESPACE, queue);
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     @Override
     public void joinedCluster() {
-        final boolean offered = offer(new ClusterEventJoinedCluster());
+        final boolean offered = offer(ClusterEventIdentifier.JOINED_CLUSTER, new ClusterEventPayloadJoinedCluster());
     }
 
     @Override
     public void joinedCluster(final byte[] nodeId) {
-        final boolean offered = offer(ClusterEventJoinedClusterNode.of(nodeId));
+        final boolean offered = offer(ClusterEventIdentifier.JOINED_CLUSTER_WITH_NODE_ID,
+                                      ClusterEventPayloadJoinedClusterWithNodeId.of(nodeId));
     }
 
     @Override
     public void leftCluster() {
-        final boolean offered = offer(new ClusterEventLeftCluster());
+        final boolean offered = offer(ClusterEventIdentifier.LEFT_CLUSTER, new ClusterEventPayloadLeftCluster());
     }
 
     @Override
     public void leftCluster(final byte[] nodeId) {
-        final boolean offered = offer(ClusterEventLeftClusterNode.of(nodeId));
+        final boolean offered = offer(ClusterEventIdentifier.LEFT_CLUSTER_WITH_NODE_ID,
+                                      ClusterEventPayloadLeftClusterNode.of(nodeId));
     }
 
     @Override
     public void markedAsSeniorClusterMember() {
-        final boolean offer = offer(new ClusterEventMarkedAsSeniorClusterMember());
+        final boolean offered = offer(ClusterEventIdentifier.MARKED_AS_SENIOR_CLUSTER_MEMBER,
+                                      new ClusterEventPayloadMarkedAsSeniorClusterMember());
     }
 }

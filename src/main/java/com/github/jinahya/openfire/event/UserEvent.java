@@ -15,14 +15,14 @@
  */
 package com.github.jinahya.openfire.event;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 
 /**
  * An abstract class for events listenable via {@link org.jivesoftware.openfire.event.UserEventListener}.
  *
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public abstract class UserEvent extends OpenfireEvent<UserEventIdentifier> {
+public abstract class UserEvent extends Event<OpenfireEventPayload> {
 
     public static final String NAMESPACE = "OPENFIRE_EVENT_USER";
 

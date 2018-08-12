@@ -15,9 +15,9 @@
  */
 package com.github.jinahya.openfire.filetransfer;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 
-public abstract class FileTransferEvent extends OpenfireEvent {
+public abstract class FileTransferEvent extends Event<OpenfireEventPayload> {
 
     public static final String NAMESPACE = "OPENFIRE_FILETRANSFER_FILETRANSFER";
 

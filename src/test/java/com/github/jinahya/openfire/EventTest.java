@@ -14,7 +14,7 @@ import java.util.function.*;
 import static java.util.Objects.requireNonNull;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public abstract class EventTest<T extends Event<N, I>, N extends Enum<N> & EventNamespace<N>, I extends Enum<I> & EventIdentifier<I>> {
+public abstract class EventTest<T extends Event<N, I>, N extends Enum<N>, I extends Enum<I>> {
 
     public EventTest(final Class<T> eventClass, final Class<N> namespaceClass, final Class<I> identifierClass) {
         super();

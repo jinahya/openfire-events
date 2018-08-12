@@ -15,9 +15,9 @@
  */
 package com.github.jinahya.openfire.container;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 
-public abstract class PluginEvent extends OpenfireEvent {
+public abstract class PluginEvent extends Event<OpenfireEventPayload> {
 
     // -----------------------------------------------------------------------------------------------------------------
     public static final String NAMESPACE = "OPENFIRE_CONTAINER_PLUGIN";

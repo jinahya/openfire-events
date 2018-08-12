@@ -15,13 +15,8 @@
  */
 package com.github.jinahya.openfire.cluster;
 
-public class ClusterEventJoinedCluster extends ClusterEvent {
+public class ClusterEventPayloadLeftCluster implements ClusterEventPayload {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public static final String IDENTIFIER = "JOINED_CLUSTER";
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public ClusterEventJoinedCluster() {
-        super(IDENTIFIER);
-    }
+    public static final String IDENTIFIER = "LEFT_CLUSTER";
 }

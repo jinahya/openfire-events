@@ -15,25 +15,12 @@
  */
 package com.github.jinahya.openfire;
 
+import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.Objects;
+import javax.xml.bind.annotation.XmlRootElement;
 
-import static java.util.Objects.requireNonNull;
-
-
-public abstract class Event {
-
-    // -----------------------------------------------------------------------------------------------------------------
-    private Event() {
-        this(null, null);
-    }
-
-    protected Event(final String namespace, final String identifier) {
-        super();
-        this.namespace = requireNonNull(namespace, "namespace is null");
-        this.identifier = requireNonNull(identifier, "identifier is null");
-        this.timestamp = System.nanoTime();
-    }
+@XmlRootElement
+public class Event<T extends EventPayload> {
 
     // -----------------------------------------------------------------------------------------------------------------
     @Override
@@ -45,24 +32,18 @@ public abstract class Event {
                + "}";
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(namespace, identifier, timestamp);
-    }
-
-    @Override
-    public boolean equals(final Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Event event = (Event) o;
-        return timestamp == event.timestamp &&
-               Objects.equals(namespace, event.namespace) &&
-               Objects.equals(identifier, event.identifier);
-    }
-
     // ------------------------------------------------------------------------------------------------------- namespace
     public String getNamespace() {
         return namespace;
+    }
+
+    public void setNamespace(final String namespace) {
+        this.namespace = namespace;
+    }
+
+    public Event<T> namespace(final String namespace) {
+        setNamespace(namespace);
+        return this;
     }
 
     // ------------------------------------------------------------------------------------------------------ identifier
@@ -70,18 +51,48 @@ public abstract class Event {
         return identifier;
     }
 
+    public void setIdentifier(final String identifier) {
+        this.identifier = identifier;
+    }
+
+    public Event<T> identifier(final String identifier) {
+        setIdentifier(identifier);
+        return this;
+    }
+
     // ------------------------------------------------------------------------------------------------------- timestamp
     public long getTimestamp() {
         return timestamp;
     }
 
+    void setTimestamp(final long timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public T getPayload() {
+        return payload;
+    }
+
+    public void setPayload(final T payload) {
+        this.payload = payload;
+    }
+
+    public Event<T> payload(final T payload) {
+        setPayload(payload);
+        return this;
+    }
+
     // -----------------------------------------------------------------------------------------------------------------
     @XmlElement(required = true)
-    private final String namespace;
+    private String namespace;
 
     @XmlElement(required = true)
-    private final String identifier;
+    private String identifier;
 
     @XmlElement(required = true)
-    private final long timestamp;
+    private long timestamp;
+
+    @XmlAnyElement(lax = true)
+    private T payload;
 }

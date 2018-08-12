@@ -15,11 +15,10 @@
  */
 package com.github.jinahya.openfire.user;
 
-import com.github.jinahya.openfire.OpenfireEvent;
+import com.github.jinahya.openfire.Event;
 import com.github.jinahya.openfire.OpenfireEventNamespace;
-import com.github.jinahya.openfire.user.PresenceEventIdentifier;
 
-public abstract class PresenceEvent extends OpenfireEvent<PresenceEventIdentifier> {
+public abstract class PresenceEvent extends Event<OpenfireEventPayload> {
 
     // -----------------------------------------------------------------------------------------------------------------
     public PresenceEvent(final PresenceEventIdentifier identifier) {

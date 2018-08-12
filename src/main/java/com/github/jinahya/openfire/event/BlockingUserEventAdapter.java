@@ -16,6 +16,7 @@
 package com.github.jinahya.openfire.event;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
+import com.github.jinahya.openfire.Event;
 import org.jivesoftware.openfire.event.UserEventListener;
 import org.jivesoftware.openfire.user.User;
 
@@ -26,32 +27,32 @@ import java.util.logging.Logger;
 import static java.lang.invoke.MethodHandles.lookup;
 import static java.util.logging.Logger.getLogger;
 
-public class BlockingUserEventAdapter extends BlockingEventAdapter<UserEvent> implements UserEventListener {
+public class BlockingUserEventAdapter extends BlockingEventAdapter<UserEventPayload> implements UserEventListener {
 
     // -----------------------------------------------------------------------------------------------------------------
     private static final Logger logger = getLogger(lookup().lookupClass().getName());
 
     // -----------------------------------------------------------------------------------------------------------------
-    public BlockingUserEventAdapter(final BlockingQueue<? super UserEvent> queue) {
-        super(queue);
+    public BlockingUserEventAdapter(final BlockingQueue<Event<? super UserEventPayload>> queue) {
+        super(UserEventPayload.NAMESPACE, queue);
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     @Override
     public void userCreated(final User user, final Map<String, Object> map) {
-        final UserEvent event = UserEventUserCreated.of(user, map);
-        final boolean offered = offer(event);
+        final UserEventPayload payload = UserEventPayloadUserCreated.of(user, map);
+        final boolean offered = offer(UserEventIdentifier.USER_CREATED, payload);
     }
 
     @Override
     public void userDeleting(final User user, final Map<String, Object> map) {
-        final UserEvent event = UserEventUserDeleting.of(user, map);
-        final boolean offered = offer(event);
+        final UserEventPayload payload = UserEventPayloadUserDeleting.of(user, map);
+        final boolean offered = offer(UserEventIdentifier.USER_DELETING, payload);
     }
 
     @Override
     public void userModified(final User user, final Map<String, Object> map) {
-        final UserEvent event = UserEventUserModified.of(user, map);
-        final boolean offered = offer(event);
+        final UserEventPayload payload = UserEventPayloadUserModified.of(user, map);
+        final boolean offered = offer(UserEventIdentifier.USER_MODIFIED, payload);
     }
 }

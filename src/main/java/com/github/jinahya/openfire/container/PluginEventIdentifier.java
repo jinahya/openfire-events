@@ -1,13 +1,10 @@
 package com.github.jinahya.openfire.container;
 
-import com.github.jinahya.openfire.OpenfireEventIdentifier;
+import com.github.jinahya.openfire.EventIdentifier;
 
-import javax.xml.bind.annotation.XmlEnum;
-
-@XmlEnum
-public enum PluginEventIdentifier implements OpenfireEventIdentifier<PluginEventIdentifier> {
+public enum PluginEventIdentifier implements EventIdentifier {
 
     PLUGIN_CREATED,
 
-    PLUGIN_DESTROYED;
+    PLUGIN_DESTROYED
 }

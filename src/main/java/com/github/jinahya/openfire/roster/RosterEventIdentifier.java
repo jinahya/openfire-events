@@ -1,15 +1,16 @@
 package com.github.jinahya.openfire.roster;
 
-import com.github.jinahya.openfire.OpenfireEventIdentifier;
+import com.github.jinahya.openfire.EventIdentifier;
 
-import javax.xml.bind.annotation.XmlEnum;
-
-@XmlEnum
-public enum RosterEventIdentifier implements OpenfireEventIdentifier<RosterEventIdentifier> {
+public enum RosterEventIdentifier implements EventIdentifier {
 
     ADDING_CONTACT,
+
     CONTACT_ADDED,
+
     CONTACT_DELETED,
+
     CONTACT_UPDATED,
+
     ROSTER_LOADED
 }

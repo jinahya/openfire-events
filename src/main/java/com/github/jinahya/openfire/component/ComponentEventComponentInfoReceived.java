@@ -18,20 +18,19 @@ package com.github.jinahya.openfire.component;
 import com.github.jinahya.xmpp.packet.IqValue;
 import org.xmpp.packet.IQ;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import static java.util.Optional.ofNullable;
 
-public class ComponentEventComponentInfoReceived extends ComponentEvent {
+@XmlRootElement
+public class ComponentEventComponentInfoReceived implements ComponentEventPayload {
 
     // -----------------------------------------------------------------------------------------------------------------
     public static ComponentEventComponentInfoReceived of(final IQ iq) {
         final ComponentEventComponentInfoReceived instance = new ComponentEventComponentInfoReceived();
         instance.setIq(ofNullable(iq).map(IqValue::of).orElse(null));
         return instance;
-    }
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public ComponentEventComponentInfoReceived() {
-        super(ComponentEventIdentifier.COMPONENT_INFO_RECEIVED);
     }
 
     // -------------------------------------------------------------------------------------------------------------- iq
@@ -44,5 +43,6 @@ public class ComponentEventComponentInfoReceived extends ComponentEvent {
     }
 
     // -----------------------------------------------------------------------------------------------------------------
+    @XmlElement
     private IqValue iq;
 }

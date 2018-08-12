@@ -1,11 +1,8 @@
 package com.github.jinahya.openfire.event;
 
-import com.github.jinahya.openfire.OpenfireEventIdentifier;
+import com.github.jinahya.openfire.EventIdentifier;
 
-import javax.xml.bind.annotation.XmlEnum;
-
-@XmlEnum
-public enum GroupEventIdentifier implements OpenfireEventIdentifier<GroupEventIdentifier> {
+public enum GroupEventIdentifier implements EventIdentifier {
 
     ADMIN_ADDED,
 

@@ -18,16 +18,11 @@ package com.github.jinahya.openfire.user;
 import org.jivesoftware.openfire.session.ClientSession;
 import org.xmpp.packet.Presence;
 
-public class PresenceEventAvailableSession extends PresenceEventWithSessionAndPresence {
+public class PresenceEventAvailableSession extends PresenceEventPayloadWithSessionAndPresence {
 
     // -----------------------------------------------------------------------------------------------------------------
     public static PresenceEventAvailableSession of(final ClientSession session, final Presence presence) {
         final PresenceEventAvailableSession instance = of(PresenceEventAvailableSession::new, session, presence);
         return instance;
-    }
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public PresenceEventAvailableSession() {
-        super(PresenceEventIdentifier.AVAILABLE_SESSION);
     }
 }

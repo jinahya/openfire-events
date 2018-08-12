@@ -18,6 +18,8 @@ package com.github.jinahya.openfire.group;
 import com.github.jinahya.xmpp.packet.JidValue;
 import org.jivesoftware.openfire.group.GroupJID;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
@@ -42,6 +44,7 @@ public class GroupJidValue extends JidValue {
         this.groupName = groupName;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    @XmlElement
     private String groupName;
 }

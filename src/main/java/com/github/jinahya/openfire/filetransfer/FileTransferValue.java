@@ -17,28 +17,29 @@ package com.github.jinahya.openfire.filetransfer;
 
 import org.jivesoftware.openfire.filetransfer.FileTransfer;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 public class FileTransferValue {
 
+    // -----------------------------------------------------------------------------------------------------------------
     public static FileTransferValue of(final FileTransfer object) {
+        if (object == null) {
+            throw new NullPointerException("object is null");
+        }
         final FileTransferValue value = new FileTransferValue();
+        value.fileName = object.getFileName();
+        value.fileSize = object.getFileSize();
         return value;
     }
 
-    // -------------------------------------------------------------------------
-    public String getFileName() {
-        return fileName;
-    }
-
-    public long getFileSize() {
-        return fileSize;
-    }
-
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    @XmlElement
     private String fileName;
 
+    @XmlElement
     private long fileSize;
 
     private String initiator;

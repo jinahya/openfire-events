@@ -17,6 +17,8 @@ package com.github.jinahya.openfire.group;
 
 import org.jivesoftware.openfire.group.Group;
 
+import javax.xml.bind.annotation.XmlElement;
+
 import static java.util.Optional.ofNullable;
 
 /**
@@ -38,7 +40,7 @@ public class GroupValue {
         return value;
     }
 
-    // ------------------------------------------------------------- description
+    // ----------------------------------------------------------------------------------------------------- description
     public String getDescription() {
         return description;
     }
@@ -47,7 +49,7 @@ public class GroupValue {
         this.description = description;
     }
 
-    // --------------------------------------------------------------------- jid
+    // ------------------------------------------------------------------------------------------------------------- jid
     public GroupJidValue getJid() {
         return jid;
     }
@@ -56,7 +58,7 @@ public class GroupValue {
         this.jid = jid;
     }
 
-    // -------------------------------------------------------------------- name
+    // ------------------------------------------------------------------------------------------------------------ name
     public String getName() {
         return name;
     }
@@ -65,10 +67,13 @@ public class GroupValue {
         this.name = name;
     }
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
+    @XmlElement
     private String description;
 
+    @XmlElement
     private GroupJidValue jid;
 
+    @XmlElement
     private String name;
 }

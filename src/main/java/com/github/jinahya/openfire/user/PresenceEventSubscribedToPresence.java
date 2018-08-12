@@ -23,17 +23,13 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
-public class PresenceEventSubscribedToPresence extends PresenceEventWithTwoJids {
+public class PresenceEventSubscribedToPresence extends PresenceEventPayloadWithTwoJids {
 
+    // -----------------------------------------------------------------------------------------------------------------
     public static PresenceEventSubscribedToPresence of(final JID subscriberJid, final JID authorizerJid) {
         final PresenceEventSubscribedToPresence instance
                 = of(PresenceEventSubscribedToPresence::new, subscriberJid, authorizerJid);
         return instance;
-    }
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public PresenceEventSubscribedToPresence() {
-        super(PresenceEventIdentifier.SUBSCRIBED_TO_PRESENCE);
     }
 
     // -----------------------------------------------------------------------------------------------------------------

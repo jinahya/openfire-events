@@ -17,16 +17,14 @@ package com.github.jinahya.openfire.component;
 
 import org.xmpp.packet.JID;
 
-public class ComponentEventComponentUnregistered extends ComponentEventWithComponent {
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class ComponentEventComponentUnregistered extends ComponentEventPayloadWithComponent {
 
     // -----------------------------------------------------------------------------------------------------------------
     public static ComponentEventComponentUnregistered of(final JID component) {
         final ComponentEventComponentUnregistered instance = of(ComponentEventComponentUnregistered::new, component);
         return instance;
-    }
-
-    // -----------------------------------------------------------------------------------------------------------------
-    public ComponentEventComponentUnregistered() {
-        super(ComponentEventIdentifier.COMPONENT_UNREGISTERED);
     }
 }

@@ -1,19 +1,19 @@
 package com.github.jinahya.openfire.user;
 
-import com.github.jinahya.openfire.OpenfireEventIdentifier;
+import com.github.jinahya.openfire.EventIdentifier;
 
-import javax.xml.bind.annotation.XmlEnum;
+public enum PresenceEventIdentifier implements EventIdentifier {
 
-@XmlEnum
-public enum PresenceEventIdentifier implements OpenfireEventIdentifier<PresenceEventIdentifier> {
-
+    // -----------------------------------------------------------------------------------------------------------------
     AVAILABLE_SESSION,
-
-    PRESENCE_CHANGED,
-
-    SUBSCRIBED_TO_PRESENCE,
 
     UNAVAILABLE_SESSION,
 
-    UNSUBSCRIBED_TO_PRESENCE;
+    // -----------------------------------------------------------------------------------------------------------------
+    PRESENCE_CHANGED,
+
+    // -----------------------------------------------------------------------------------------------------------------
+    SUBSCRIBED_TO_PRESENCE,
+
+    UNSUBSCRIBED_TO_PRESENCE
 }

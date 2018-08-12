@@ -16,26 +16,31 @@
 package com.github.jinahya.openfire.container;
 
 import com.github.jinahya.openfire.BlockingEventAdapter;
+import com.github.jinahya.openfire.Event;
 import org.jivesoftware.openfire.container.Plugin;
 import org.jivesoftware.openfire.container.PluginListener;
 
 import java.util.concurrent.BlockingQueue;
 
-public class BlockingPluginAdapter extends BlockingEventAdapter<PluginEvent> implements PluginListener {
+public class BlockingPluginAdapter extends BlockingEventAdapter<PluginEventPayload> implements PluginListener {
 
     // -----------------------------------------------------------------------------------------------------------------
-    public BlockingPluginAdapter(final BlockingQueue<? super PluginEvent> queue) {
-        super(queue);
+    public static final String NAMESPACE = "CONTAINER_PLUGIN";
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public BlockingPluginAdapter(final BlockingQueue<Event<? super PluginEventPayload>> queue) {
+        super(NAMESPACE, queue);
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     @Override
     public void pluginCreated(final String name, final Plugin plugin) {
-        final boolean offered = offer(PluginEventPluginCreated.of(name));
+        final boolean offered = offer(PluginEventIdentifier.PLUGIN_CREATED, PluginEventPayloadPluginCreated.of(name));
     }
 
     @Override
     public void pluginDestroyed(final String name, final Plugin plugin) {
-        final boolean offered = offer(PluginEventPluginDestroyed.of(name));
+        final boolean offered = offer(PluginEventIdentifier.PLUGIN_DESTROYED,
+                                      PluginEventPayloadPluginDestroyed.of(name));
     }
 }
